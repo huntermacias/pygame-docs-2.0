@@ -23,9 +23,9 @@ export default function Home() {
                 </span>
               </Link>
 
-              <Link href="https://github.com/username/pygame-docs">
+              <Link href="https://github.com/huntermacias/revamed-pygame-docs">
                 <span className="ml-8 text-gray-400 hover:text-gray-200">
-                  GitHub
+                  Contribute
                 </span>
               
               </Link>
