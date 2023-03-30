@@ -78,7 +78,7 @@ const InterTopics = ['cursors', 'joystick', 'mask', 'sprite', 'transform', 'Buff
 						<div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
 							<div className="relative grid grid-cols-3 gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
 							{BegTopics.map((topic) => (
-							<Link key={topic} href={`/topics/${topic.toLowerCase().replace(/\s+/g, '-')}`}>
+							<Link key={topic} href={`/${topic.toLowerCase().replace(/\s+/g, '-')}`}>
 								<span className="block font-medium text-emerald-400 hover:text-emerald-300">
 								{topic}
 								</span>
@@ -102,7 +102,7 @@ const InterTopics = ['cursors', 'joystick', 'mask', 'sprite', 'transform', 'Buff
 						<div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
 							<div className="relative grid grid-cols-3 gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
 							{InterTopics.map((topic) => (
-							<Link key={topic} href={`/topics/${topic.toLowerCase().replace(/\s+/g, '-')}`}>
+							<Link key={topic} href={`/${topic.toLowerCase().replace(/\s+/g, '-')}`}>
 								<span className="block font-medium text-emerald-400 hover:text-emerald-300">
 								{topic}
 								</span>
@@ -128,7 +128,7 @@ const InterTopics = ['cursors', 'joystick', 'mask', 'sprite', 'transform', 'Buff
 						>
 						<div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
 							<div className="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
-							<Link href="/topics/topic1">
+							<Link href="/">
 								<span className="block font-medium text-emerald-400 hover:text-emerald-300">
 								Topic 1
 								</span>

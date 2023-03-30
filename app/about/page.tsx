@@ -36,7 +36,7 @@ const AboutPage = () => {
               useful. If you have any feedback or suggestions, please do not
               hesitate to{" "}
               <a
-                href="mailto:contact@pygamedocs.com"
+                href="huntermacias20@gmail.com"
                 className="text-emerald-400 hover:text-emerald-300"
               >
                 contact us
@@ -58,7 +58,7 @@ const AboutPage = () => {
               If you are interested in joining our team or contributing to
               Pygame Docs in any way, please{" "}
               <a
-                href="mailto:contact@pygamedocs.com"
+                href="huntermacias20@gmail.com"
                 className="text-emerald-400 hover:text-emerald-300"
               >
                 contact us
