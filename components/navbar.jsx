@@ -1,8 +1,10 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
+	const router = useRouter();
 	const [dropdownOpenBeg1, setDropdownOpenBeg1] = useState(false);
 	const [dropdownOpenInter, setDropdownOpenInter] = useState(false);
 	const [dropdownOpenAdv, setDropdownOpenAdv] = useState(false);
@@ -41,6 +43,14 @@ const Navbar = () => {
 
   const InterTopics = ['cursors', 'joystick', 'mask', 'sprite', 'transform', 'BufferProxy', 'freetype', 'gfxdraw', 'midi', 'PixelArray', 'pixelcopy', 'sndarray', 'surfarray', 'math'];
 
+
+
+  useEffect(() => {
+    setDropdownOpenBeg1(false);
+    setDropdownOpenInter(false);
+    setDropdownOpenAdv(false);
+  }, [router]);
+
   return (
     <nav className="flex justify-center bg-gray-800">
       <div className="relative">
@@ -53,7 +63,7 @@ const Navbar = () => {
         {dropdownOpenBeg1 && (
           <div
             className="absolute z-10 top-full left-1/2 w-1/2 transform -translate-x-1/2 bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
-			style={{ width: '300px', maxHeight: '200px' }}
+			style={{ width: '300px', maxHeight: '300px' }}
           >
             <div className="grid grid-cols-3 gap-4 px-5 py-6 sm:px-8 sm:py-8">
               {BegTopics.map((topic) => (
@@ -77,7 +87,7 @@ const Navbar = () => {
         {dropdownOpenInter && (
           <div
             className="absolute z-10 top-full left-1/2 w-1/2 transform -translate-x-1/2 bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
-			style={{ width: '330px', maxHeight: '200px' }}
+			style={{ width: '330px', maxHeight: '300px' }}
           >
             <div className="grid grid-cols-3 gap-4 px-5 py-6 sm:px-8 sm:py-8">
               {InterTopics.map((topic) => (

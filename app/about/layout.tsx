@@ -1,6 +1,7 @@
-import Footer from '../components/footer'
-import Navbar from '../components/navbar'
-import './globals.css'
+
+import Footer from '../../components/footer'
+import Navbar from '../../components/navbar'
+import '.././globals.css'
 
 export const metadata = {
   title: 'PyGame Documentation 2.0',
@@ -12,9 +13,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='bg-gray-900 h-screen'>
         <Navbar />  
-        
+		
         {children}
-        <br />
 
         <Footer />
         

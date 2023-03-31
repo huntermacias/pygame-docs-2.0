@@ -1,6 +1,7 @@
 import React from 'react';
 import TextBox from '../../components/TextBox';
 
+
 const Color = () => {
 
   const data = [
