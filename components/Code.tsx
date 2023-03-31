@@ -29,7 +29,7 @@ const Code = ({
         }, 15)
 
         return () => clearInterval(intervalId)
-      }, 100)
+      },40 )
     }
   }, [code, show, animated])
 
@@ -44,10 +44,10 @@ const Code = ({
         <pre
           className={
             className +
-            'transition-all w-fit bg-transparent duration-100 py-0 no-scrollbar'
+            'transition-all w-full bg-transparent duration-100 py-0 no-scrollbar text-xs lg:text-lg mt-4'
           }
           style={{
-            maxHeight: show ? lines * 24 : 0,
+            maxHeight: show ? lines * 28 : 0,
             opacity: show ? 1 : 0,
           }}>
           {tokens.map((line, i) => {
