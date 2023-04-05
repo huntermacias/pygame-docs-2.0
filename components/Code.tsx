@@ -44,7 +44,7 @@ const Code = ({
         <pre
           className={
             className +
-            'transition-all w-full bg-transparent duration-100 py-0 no-scrollbar text-xs lg:text-lg mt-4'
+            'transition-all w-full bg-transparent duration-100 py-0 no-scrollbar text-xs lg:text-md mt-4'
           }
           style={{
             maxHeight: show ? lines * 28 : 0,
