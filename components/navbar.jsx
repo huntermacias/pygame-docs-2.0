@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, redirect } from 'next/navigation';
 
 const Navbar = () => {
 	const router = useRouter();
@@ -28,7 +28,7 @@ const Navbar = () => {
   const BegTopics = ["Color",
   "Display",
   "Draw",
-  "Event",
+  "Events",
   "Font",
   "Image",
   "Key",
@@ -53,6 +53,16 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-center bg-gray-800">
+        <div className="relative">
+        <button
+          className="text-emerald-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-mono focus:outline-none"
+          onClick={() => {
+            router.push('/');
+          }}
+        >
+          Home
+        </button>
+      </div>
       <div className="relative">
         <button
           className="text-emerald-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-mono focus:outline-none"
