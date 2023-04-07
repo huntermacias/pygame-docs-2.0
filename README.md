@@ -7,7 +7,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 #### To get started, you need to clone this repository to your local machine. You can do this by running the following command in your terminal:
 
 ```terminal
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/huntermacias/revamed-pygame-docs.git
 ```
 
 #### Next, navigate to the project directory:
@@ -45,7 +45,7 @@ git checkout -b my-new-feature
 5. Commit your changes
 
 ```terminal
-git commit -am 'Add some feature'
+git commit -m 'Add some feature'
 
 ```
 6. Push your changes to your forked repository
