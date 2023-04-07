@@ -30,7 +30,8 @@ USEREVENT - code`
 			print('left arrow released')
 	elif event.type == pygame.MOUSEBUTTONDOWN:
 		# event.button triggers several values
-		# (1-left, 2-mid, 3-right, 4-scroll-up, 5-scroll-down)
+		# (1-left, 2-mid, 3-right, 
+		# 4-scroll-up, 5-scroll-down)
 		print(event.button)
 		left, mid, right = pygame.mouse.get_pressed()
 		if left: 

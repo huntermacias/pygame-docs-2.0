@@ -7,7 +7,7 @@ import Code from './Code'
 
 const GettingStarted = ({code}) => {
   return (
-	<div className="bg-gray-800 rounded-md p-4 mb-4 max-w-3xl w-full">
+	<div className="bg-gray-800 rounded-md p-2 mb-4 max-w-5xl w-full">
 
 		<Tabs defaultValue='gettingstarted' className='text-white'>
 		<TabsList>
