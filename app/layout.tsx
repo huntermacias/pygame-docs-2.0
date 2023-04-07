@@ -18,7 +18,7 @@ export const metadata = {
     shortcut: 'https://hackaday.com/wp-content/uploads/2020/10/pygame2_feat.png?w=800',
     apple: 'https://hackaday.com/wp-content/uploads/2020/10/pygame2_feat.png?w=800',
     other: {
-      rel: 'raider-image',
+      rel: 'pygame-documentation',
       url: 'https://hackaday.com/wp-content/uploads/2020/10/pygame2_feat.png?w=800',
     },
   },
