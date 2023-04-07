@@ -9,7 +9,7 @@ const GettingStarted = ({code}) => {
   return (
 	<div className="bg-gray-800 rounded-md p-4 mb-4 max-w-3xl w-full">
 
-		<Tabs defaultValue='gettingstarted' className=''>
+		<Tabs defaultValue='gettingstarted' className='text-white'>
 		<TabsList>
 		<TabsTrigger value='gettingstarted'>Getting Started</TabsTrigger>
 		</TabsList>

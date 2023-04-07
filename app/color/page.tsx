@@ -1,5 +1,6 @@
 import React from 'react';
 import TextBox from '../../components/TextBox';
+import GettingStarted from '../../components/GettingStarted';
 
 
 const Color = () => {
@@ -105,11 +106,12 @@ const Color = () => {
                         <p className="mt-1 text-lg text-gray-300 font-mono">
                           <span className='text-bold text-lg text-amber-400'>Description: </span>{method.description}
                         </p>
-                        <code className="mt-2 text-sm font-mono text-emerald-400">
-                        <span className='text-bold text-lg text-amber-400'>Code Snippet: </span> {method.codesample}
-                        </code>
+                        {/* <code className="mt-2 text-sm font-mono text-emerald-400"> */}
+                        {/* <span className='text-bold text-lg text-amber-400'>Code Snippet: </span> {method.codesample} */}
+                        {/* </code> */}
                       </div>
                     </div>
+                        <GettingStarted code={method.codesample} />
                   </li>
                 </div>
               ))}
