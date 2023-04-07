@@ -12,8 +12,7 @@ const Color = () => {
   ]
 
   return (
-    <div className="bg-gray-800 min-h-screen">
-    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-2xl p-6 mb-10">
       <div className="text-center">
         <h2 className="text-3xl font-extrabold text-amber-300">pygame.Color Methods</h2>
         <p className="mt-4 text-lg text-white">
@@ -49,13 +48,15 @@ const Color = () => {
                         {/* </code> */}
                       </div>
                     </div>
-                        <GettingStarted code={method.codesample} />
+
+                    
+                    <GettingStarted code={method.codesample} />
                   </li>
                 </div>
               ))}
           </ul>
         </div>
-        <div className="mt-10 p-4 pb-40">
+        <div className="mt-10 p-4 pb-40 text-white font-mono">
           <TextBox title="PyGame Color Description" description={colordescription[0]} />
          
         </div>
@@ -63,7 +64,7 @@ const Color = () => {
       </div>
 
 
-    </div>
+   
     );
 };
 
