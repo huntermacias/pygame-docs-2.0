@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/GettingStarted.jsx", "components/TextBox.jsx"  ],
+, "components/GettingStarted.jsx", "components/TextBox.jsx", "app/events/docs.js"  ],
   "exclude": [
     "node_modules"
   ]

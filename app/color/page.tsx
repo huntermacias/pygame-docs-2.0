@@ -1,73 +1,11 @@
 import React from 'react';
 import TextBox from '../../components/TextBox';
 import GettingStarted from '../../components/GettingStarted';
-
+import { examples } from "./docs"
 
 const Color = () => {
 
-  const data = [
-    {
-      title: ' Color.update(r, g, b, a) - None',
-      description: 'Sets the color to the given RGBA value.',
-      key: '1',
-      codesample: 'color.update(255, 0, 0, 128)'
-    },
-    {
-      title: 'Color.r - Int',
-      description: 'Gets or sets the red value of the Color',
-      key: '3',
-      codesample: 'Color.r = 255'
-    },
-    {
-      title: 'Color.g - Int',
-      description: 'Gets or sets the green value of the Color',
-      key: '4',
-      codesample: 'Color.g = 255'
-    },
-    {
-      title: 'Color.b - Int',
-      description: 'Gets or sets the blue value of the Color',
-      key: '5',
-      codesample: 'Color.b = 255'
-    },
-    {
-      title: 'Color.a - Int',
-      description: 'Gets or sets the alpha value of the Color',
-      key: '6',
-      codesample: 'Color.a = 128'
-    },
-    {
-      title: ' Color.grayscale() - Color',
-      description: 'Returns the grayscale of the color as a new color.',
-      key: '2',
-      codesample: 'color.grayscale()'
-    },
-    {
-      title: "Invert",
-      description: "Return the inverse of the color.",
-      key: "invert",
-      codesample: "color.invert()"
-    },
-    {
-      title: "Lighten",
-      description: "Return a lighter color by increasing the value of the lightness channel.",
-      key: "lighten",
-      codesample: "color.lighten(10)"
-    },
-    {
-      title: "Darken",
-      description: "Return a darker color by decreasing the value of the lightness channel.",
-      key: "darken",
-      codesample: "color.darken(10)"
-    },
-    {
-      title: "Blend",
-      description: "Blend the color with another color by a given percentage using alpha compositing.",
-      key: "blend",
-      codesample: "color.blend(anotherColor, 0.5)"
-    }
 
-  ];
   
   const colordescription = [
     'pygame.Color is a module that provides various color-related functions and methods for working with colors in Pygame. This module provides a Color class that can be used to create, modify and manipulate color objects in Pygame. To use the pygame.Color method, you will first need to import the pygame module in your Python script. Then, you can create a new color object by passing in the desired RGB values or a string representation of the color. Once you have created a color object, you can use various methods to modify the color, such as adjusting the hue, saturation, or lightness, changing the color to grayscale, or converting the color to a different color space. Some of the commonly used methods of the pygame.Color class include hsva, hsla, lerp, normalize, set_length, correct_gamma, fade_ip, lerp_ip, and lerp_ip. These methods allow you to perform operations such as setting the color based on hue, saturation, value, and alpha values, or smoothly transitioning between two colors. Overall, the pygame.Color module provides a flexible and powerful way to work with colors in Pygame, making it easier to create visually appealing games and graphics.'
@@ -85,7 +23,7 @@ const Color = () => {
       
       <div className="mt-10">
           <ul className="divide-y divide-gray-200">
-            {data.map((method) => (
+            {examples.map((method) => (
               <div key={method.key}>
                   
                   <li className="py-4">
