@@ -5,7 +5,7 @@ import { gettingstart } from '../helpers/documentation-code';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white font-mono">
       <header className="py-6">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
           <div className="w-full flex justify-between items-center">
@@ -35,9 +35,8 @@ export default function Home() {
         </nav>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-70 md:mr-8">
+      <main className="max-w-7xl mx-auto px-4 lg:px-8 py-12 flex flex-col md:flex-row md:space-x-8">
+        <div className="w-full md:w-4/5">
           <h1 className="text-5xl font-bold mb-4">Welcome to Pygame Docs</h1>
           <p className="text-xl mb-8">
             Pygame is a set of Python modules designed for writing video games.
@@ -52,8 +51,8 @@ export default function Home() {
             </span>
           </Link>
 
-          <div className="bg-gray-900 text-white py-12 mt-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gray-900 text-white py-12 mt-8 max-w-4xl mx-auto">
+            <div className="px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold mb-6">Get started with PyGame</h2>
               <p className="text-lg mb-8">
                 Follow these simple steps to start creating games with PyGame:
@@ -76,19 +75,25 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full md:w-30 mt-8 md:mt-0">
+        <div className="w-full md:w-1/3 mt-8 md:mt-0">
+          <div className="max-w-md mx-auto">
           <Image
-            src="https://uploads-ssl.webflow.com/61f7efd44d01cc87c88dc6f3/6318e21e7ee37e36ce16d836_Getting%20Started%20With%20Pygame%20For%20Kids%20blog01.jpg"
-            alt="Pygame Docs"
-            className="w-full rounded-md"
-            width={400}
-            height={400}
-          />
-        </div>
-      </div>
-
-      </main>
-
+        src="https://uploads-ssl.webflow.com/61f7efd44d01cc87c88dc6f3/6318e21e7ee37e36ce16d836_Getting%20Started%20With%20Pygame%20For%20Kids%20blog01.jpg"
+        alt="Pygame Docs"
+        className="w-full rounded-md"
+        width={400}
+        height={400}
+      />
     </div>
-  );
+  </div>
+
+  </main>
+
+</div>
+);
 }
+
+
+
+
+
