@@ -3,6 +3,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # Pygame Documentation 2.0
 #### Welcome to the Project Name repository! This project is an open-source project that you can contribute to. This document will provide information on how to contribute and get started.
 
+## Live Demo: 
+#### [PyGame Docs](https://pydocs.huntermacias.io)
+
 ## Installation
 #### To get started, you need to clone this repository to your local machine. You can do this by running the following command in your terminal:
 
