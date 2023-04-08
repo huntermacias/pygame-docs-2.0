@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["uploads-ssl.webflow.com"]
+    domains: ["uploads-ssl.webflow.com", "cdn-icons-png.flaticon.com"]
   }
 }
 

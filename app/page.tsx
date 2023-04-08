@@ -7,33 +7,49 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       <header className="py-6">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-          <div className="w-full flex justify-between items-center">
-          
-            <div className="flex items-center">
-              <Link href="/about" className="ml-8 text-gray-400 hover:text-gray-200">
-                <span>
-                  About
-                </span>
-              </Link>
+  <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center" aria-label="Top">
+    <div className="flex items-center">
+      <Link href="/about" className="ml-8 text-gray-400 hover:text-gray-200">
+        <span>
+          About
+        </span>
+      </Link>
 
-              <Link href="https://www.pygame.org/docs/">
-                <span className="ml-8 text-gray-400 hover:text-gray-200"
-                >
-                  Original Docs
-                </span>
-              </Link>
+      <Link href="https://www.pygame.org/docs/">
+        <span className="ml-8 text-gray-400 hover:text-gray-200"
+        >
+          Original Docs
+        </span>
+      </Link>
 
-              <Link href="https://github.com/huntermacias/revamed-pygame-docs">
-                <span className="ml-8 text-gray-400 hover:text-gray-200">
-                  Contribute
-                </span>
-              
-              </Link>
+      <Link href="https://github.com/huntermacias/revamed-pygame-docs">
+        <span className="ml-8 text-gray-400 hover:text-gray-200">
+          Contribute
+        </span>
+
+      </Link>
+    </div>
+
+    <div className="relative w-70 pt-4">
+              <input
+                className="bg-gray-800 text-white rounded-md pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="text"
+                placeholder="Search..."
+              />
+              <svg
+                className="absolute top-6 left-2 h-6 w-6 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  className="heroicon-ui"
+                  d="M16.56 15.94l4.63 4.63a1 1 0 0 1-1.42 1.42l-4.63-4.63a8.5 8.5 0 1 1 1.42-1.42zM9.5 15.5a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
+                />
+              </svg>
             </div>
-          </div>
-        </nav>
-      </header>
+  </nav>
+</header>
+
 
       <main className="max-w-7xl mx-auto px-4 lg:px-8 py-12 flex flex-col md:flex-row md:space-x-8">
         <div className="w-full md:w-4/5">
