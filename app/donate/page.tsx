@@ -10,18 +10,21 @@ const DONATION_OPTIONS = [
     name: "Basic",
     description: "Support the project with a basic donation.",
     price: 10,
+	price_id: 'https://buy.stripe.com/14k6pi5qD3h6cjmaEI',
   },
   {
     id: 2,
     name: "Premium",
     description: "Get some extra perks with a premium donation.",
     price: 25,
+	price_id: 'https://buy.stripe.com/7sI292dX9aJy0AE8wB',
   },
   {
     id: 3,
     name: "VIP",
     description: "Become a VIP supporter with a VIP donation.",
     price: 50,
+	price_id: 'https://buy.stripe.com/dR6dRK7yLbNC5UYbIO',
   },
 ];
 
@@ -31,14 +34,19 @@ const Donation = () => {
     name: "Basic",
     description: "Support the project with a basic donation.",
     price: 10,
+	price_id: 'https://buy.stripe.com/dR6dRK7yLbNC5UYbIO'
   });
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
 
+  const donate = (price_id) => {
+	window.open(price_id);
+  }
+
   return (
-    <div className="bg-gray-200 rounded-lg shadow-lg p-6 max-w-md mx-auto mt-10">
+    <div className="bg-gray-200 rounded-lg shadow-lg p-6 md:max-w-3xl mx-auto mt-28 font-mono">
       <div className="text-center">
         <h3 className="text-lg leading-6 font-medium text-gray-900 mb-2">
           Support the Project
@@ -69,7 +77,7 @@ const Donation = () => {
 
 
       {selectedOption && (
-        <div className="mt-6 border-t border-gray-200 pt-4">
+        <div className="mt-6 border-t border-gray-500 rounded-lg p-4 bg-gray-300 pt-4 font-mono">
           <h4 className="text-lg font-medium text-gray-900">Selected Option</h4>
           <div className="mt-4 flex items-center">
             <div className="flex-shrink-0">
@@ -89,7 +97,8 @@ const Donation = () => {
             </div>
           </div>
           <div className="mt-4">
-            <button
+            <button 
+			  onClick={() => donate(selectedOption.price_id)}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg"
             >
               Donate Now

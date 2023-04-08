@@ -104,12 +104,12 @@ const Navbar = () => {
             >
               Log in
             </a>
-            <a
-              href="/"
+            <Link
+              href="/signup"
               className="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-indigo-700"
             >
               Sign up
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -143,12 +143,12 @@ const Navbar = () => {
             Log in
           </a>
         </div>
-        <a
-          href="/"
+        <Link
+          href="/signup"
           className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50"
         >
           Sign up
-        </a>
+        </Link>
       </div>
     </nav>
   );
