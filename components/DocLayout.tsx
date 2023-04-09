@@ -1,32 +1,15 @@
 import React from "react";
 import GettingStarted from "./GettingStarted";
 import TextBox from "./TextBox";
+import { Info, Description, LayoutProps } from "../types";
 
-type Info = {
-  title: string;
-  description: string;
-  key: string;
-  codesample: string;
-};
-
-type Description = {
-  title: string;
-  description: string;
-}
-
-type Props = {
-  title: string;
-  baseDescription: string;
-  data: Info[];
-  description: Description;
-};
 
 const DocLayout = ({
   title,
   baseDescription,
   data,
   description,
-}: Props) => {
+}: LayoutProps) => {
   return (
     <div className="mx-auto max-w-2xl p-6 mb-10">
       <div className="text-center">

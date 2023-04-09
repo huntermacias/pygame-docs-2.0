@@ -25,7 +25,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/events/docs.js"
-, "components/PygameModal.jsx"  ],
+    "app/events/docs.js",
+    "components/PygameModal.jsx"
+  ],
   "exclude": ["node_modules"]
 }
