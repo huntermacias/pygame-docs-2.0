@@ -14,58 +14,58 @@ const navigation = [
     options: [
       {
         name: 'Pygame.Color',
-        description: 'Start here to learn how to use Pygame.Color',
+        description: 'Learn how to work with colors in Pygame with this guide. This topic covers creating color objects, setting colors for surfaces, and using common color presets. Whether you are designing backgrounds, drawing shapes or creating custom sprites, understanding how to work with colors is essential to creating visually appealing games. Start learning with Pygame.Color now!',
         href: '/color',
         icon: LightningBoltIcon,
       },
-	  {
+      {
         name: 'Pygame.Rect',
-        description: 'Start here to learn how to use Pygame.Rect',
+        description: 'Learn how to use Pygame.Rect for managing rectangular areas on the screen.',
         href: '/rect',
         icon: LightningBoltIcon,
-      },
-      {
+        },
+        {
         name: 'Pygame.Display',
-        description: 'Start here to learn how to use Pygame.Display',
+        description: 'Learn how to use Pygame.Display to create and manage game windows and screens.',
         href: '/display',
         icon: LightningBoltIcon,
-      },
-	  {
+        },
+        {
         name: 'Pygame.Draw',
-        description: 'Start here to learn how to use Pygame.Draw',
+        description: 'Learn how to use Pygame.Draw to draw shapes, lines, and other graphics on the screen.',
         href: '/draw',
         icon: LightningBoltIcon,
-      },
-	  {
+        },
+        {
         name: 'Pygame.Events',
-        description: 'Start here to learn how to use Pygame.Events',
+        description: 'Learn how to use Pygame.Events to handle events such as key presses and mouse clicks.',
         href: '/events',
         icon: LightningBoltIcon,
-      },
-	  {
+        },
+        {
         name: 'Pygame.Font',
-        description: 'Start here to learn how to use Pygame.Font',
+        description: 'Learn how to use Pygame.Font to render text on the screen with different fonts, sizes, and styles.',
         href: '/font',
         icon: LightningBoltIcon,
-      },
-	  {
+        },
+        {
         name: 'Pygame.Image',
-        description: 'Start here to learn how to use Pygame.Image',
+        description: 'Learn how to use Pygame.Image to load and display images on the screen.',
         href: '/image',
         icon: LightningBoltIcon,
-      },
-	  {
+        },
+        {
         name: 'Pygame.Time',
-        description: 'Start here to learn how to use Pygame.time',
+        description: 'Learn how to use Pygame.Time to manage time and control the game loop.',
         href: '/time',
         icon: LightningBoltIcon,
-      },
-	  {
+        },
+        {
         name: 'Pygame.Mouse',
-        description: 'Start here to learn how to use Pygame.Mouse',
+        description: 'Learn how to use Pygame.Mouse to handle mouse input and get information about the mouse cursor.',
         href: '/mouse',
         icon: LightningBoltIcon,
-      },
+        },
     ],
   },
   {
