@@ -98,7 +98,7 @@ const Donation = () => {
           </div>
           <div className="mt-4">
             <button 
-			  onClick={() => donate(selectedOption.price_id)}
+			        onClick={() => donate(selectedOption.price_id)}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg"
             >
               Donate Now
