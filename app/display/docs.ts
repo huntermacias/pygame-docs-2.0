@@ -1,4 +1,9 @@
-export type Info = { title: string; description: string; key: string; codesample: string };
+export type Info = {
+  title: string;
+  description: string;
+  key: string;
+  codesample: string;
+};
 const data: Info[] = [
   {
     title: " display.init() - None",
@@ -49,9 +54,10 @@ const data: Info[] = [
     codesample: "display.Info()",
   },
 ];
-const description = [
-  'pygame.display is a module that allows you to control the display window and screen'
-]
-
+const description = {
+  title: "pygame display Description",
+  description:
+    "pygame.display is a module that allows you to control the display window and screen",
+};
 
 export { data, description };
