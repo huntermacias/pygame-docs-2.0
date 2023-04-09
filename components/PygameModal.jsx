@@ -10,7 +10,7 @@ const PygameModal = () => {
   const [code, setCode] = useState('');
 
 
-  const OPENAI_API_KEY = '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';
+  const OPENAI_API_KEY = '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';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
