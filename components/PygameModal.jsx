@@ -10,7 +10,7 @@ const PygameModal = () => {
   const [code, setCode] = useState('');
 
 
-  const OPENAI_API_KEY = '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';
+  const OPENAI_API_KEY = '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';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,8 +29,8 @@ const PygameModal = () => {
       }),
     });
     const data = await response.json();
-    console.log('data', myprompt)
-    console.log(data.choices[0].text);
+    console.log('data', data)
+    // console.log(data.choices);
     setCode(data.choices[0].text);
   };
 
@@ -52,7 +52,7 @@ const PygameModal = () => {
           className="fixed inset-0 z-10 overflow-auto"
           onClose={() => setIsOpen(false)}
         >
-          <div className="min-h-screen px-4 text-center">
+          <div className="min-h-screen px-4 text-center font-mono">
             <Transition.Child
               as={React.Fragment}
               enter="ease-out duration-300"
@@ -122,7 +122,6 @@ const PygameModal = () => {
                 <p className="text-sm font-medium text-gray-500">
                   Generated Pygame code:
                 </p>
-                {/* <pre className="mt-2 text-sm text-gray-700">{code}</pre> */}
                 <GettingStarted code={code} />
               </div>
             )}
