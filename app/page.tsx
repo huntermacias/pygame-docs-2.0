@@ -13,6 +13,18 @@ export default function Home() {
     { name: 'Draw', url: '/draw' },
     { name: 'Events', url: '/events' },
     { name: 'Rect', url: '/rect' },
+    { name: 'Display', url: '/display' },
+    { name: 'Time', url: '/time' },
+    { name: 'Image', url: '/image' },
+    { name: 'Mouse', url: '/mouse' },
+    { name: 'Surface', url: '/surface' },
+    { name: 'Pygame', url: '/pygame'},
+    { name: 'Keys', url: '/keys' },
+    { name: 'Font', url: '/font' },
+    { name: 'Locals', url: '/locals' }, 
+    { name: 'Mixer', url: '/mixer' }, 
+    { name: 'Music', url: '/music' }, 
+
   ];
 
   const [value, setValue] = useState('');

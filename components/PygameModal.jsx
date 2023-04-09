@@ -122,14 +122,14 @@ const PygameModal = () => {
                     onClick={handleSubmit}
                     >
                     Generate
-                    </button>
-                    <button
+                  </button>
+                  <button
                     type="button"
                     className="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-gray-200 border border-transparent rounded-md shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                     onClick={() => setIsOpen(false)}
                     >
                     Cancel
-                    </button>
+                  </button>
                     </div>
                     {code && (
               <div className="mt-8">

@@ -27,7 +27,7 @@ const Navbar = () => {
     "Pygame",
   ];
 
-  const InterTopics = ["Color"];
+  const InterTopics = ["Cursors", "Sprites"];
 
   return (
     <nav className="bg-gray-800 shadow-lg text-white font-mono">
