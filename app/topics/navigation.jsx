@@ -100,7 +100,7 @@ const navigation = [
     name: 'Using Classes with Pygame',
     options: [
       {
-        name: 'Simple Object Class', 
+        name: 'Player Object', 
         href: '/topics',
         icon: LightningBoltIcon,
         code: `import pygame
@@ -108,22 +108,92 @@ const navigation = [
 # file - player.py
 
 class Player(pygame.sprite.Sprite):
-""" This class represents the player. """
-def __init__(self):
-    super().__init__()
-    self.image = pygame.Surface([20, 20])
-    self.image.fill(RED)
-    self.rect = self.image.get_rect()
+  """ This class represents the player. """
+  def __init__(self):
+      """ Constructor """
+      super().__init__()
+      self.image = pygame.Surface([20, 20])
+      self.image.fill(RED)
+      self.rect = self.image.get_rect()
 
-def update(self):
-    """ Update the player location. """
-    pos = pygame.mouse.get_pos()
-    self.rect.x = pos[0]
-    self.rect.y = pos[1]
+  def update(self, screen):
+      """ Update player. """
+      screen.blit(self.image, self.rect)
+      pos = pygame.mouse.get_pos()
+      self.rect.x = pos[0]
+      self.rect.y = pos[1]
+      
+        `
+      },
+      {
+        name: 'Ball Object', 
+        href: '/topics',
+        icon: LightningBoltIcon,
+        code: `import pygame
+
+# file - block.py
+
+class Block(pygame.sprite.Sprite):
+  """ block for player to collect """
+  def __init__(self):
+      """ Constructor """
+      super().__init__()
+      self.image = pygame.Surface([20, 20])
+      self.image.fill(BLACK)
+      self.rect = self.image.get_rect()
+
+  def reset_pos(self):
+      """ Called to reset pos. """
+      self.rect.y = random.randrange(-300, -20)
+      self.rect.x = random.randrange(SCREEN_WIDTH)
+
+  def update(self, screen):
+      """ Called to update block object """
+      screen.blit(self.image, self.rect)
+      self.rect.y += 1
+      offscreen = SCREEN_HEIGHT + self.rect.h
+      if self.rect.y > offscreen:
+          self.reset_pos()
+        `
+      },
+      {
+        name: 'Game Object', 
+        href: '/topics',
+        icon: LightningBoltIcon,
+        code: `import pygame
+from player import Player
+from block import Block
+    
+# file - game.py
+    
+class Game():
+  """ This class represents our game object """
+  def __init__(self):
+    """ Constructor
+    Create attributes/initialize the game. """
+  
+    # Create sprite lists
+    self.blocks = pygame.sprite.Group()
+    self.all_sprites_list = pygame.sprite.Group()
+  
+    # Create the block sprites
+    self.create_blocks()
+  
+    # Create the player
+    self.player = Player()
+    self.all_sprites_list.add(self.player)
+  
+  def update(self, screen):
+    """ update everything in our game. """
+    self.player.update(screen)
+    for block in self.blocks:
+        block.update(screen)
         `
       },
     ],
   },
+  
+
 ];
 
 export default navigation;
