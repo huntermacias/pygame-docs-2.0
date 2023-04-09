@@ -49,7 +49,9 @@ export default function RootLayout({ children }) {
         {children}
         <br />
 
-        <Footer />
+        <div className="md:block hidden">
+          <Footer />
+        </div>
         
       </body>
     </html>

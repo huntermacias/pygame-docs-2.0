@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       <header className="py-6 text-sm md:text-lg font-mono">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center" aria-label="Top">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8 flex flex-col sm:flex-row justify-between items-center" aria-label="Top">
           <div className="flex items-center">
             <Link href="/about" className="ml-8 text-gray-400 hover:text-gray-200">
               <span>
