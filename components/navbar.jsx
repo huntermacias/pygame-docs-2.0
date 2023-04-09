@@ -83,37 +83,67 @@ const Navbar = () => {
                   <div className="relative inline-block text-left">
                     <div>
                       <button
-                        onClick={() => setIsOpen2(!isOpen2)}
+                        onClick={() => {
+                          setIsOpen2(!isOpen2);
+                          setIsOpen3(false);
+                        }}
                         type="button"
                         className="inline-flex justify-start w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       >
                         Beg Topics
-                        <svg
-                          className="-mr-1 ml-2 h-5 w-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path fillRule="evenodd" d="M10 14l6-6H4l6 6z" />
-                        </svg>
+                        {!isOpen2 ? (
+                          <svg
+                            className="-mr-1 ml-2 h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path fillRule="evenodd" d="M10 14l6-6H4l6 6z" />
+                          </svg>
+                        ) : (
+                          <svg
+                            className="-mr-1 ml-2 h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path fillRule="evenodd" d="M10 7l6+6H4l6 -6z" />
+                          </svg>
+                        )}
                       </button>
 
                       <button
-                        onClick={() => setIsOpen3(!isOpen3)}
+                        onClick={() => {
+                          setIsOpen3(!isOpen3);
+                          setIsOpen2(false);
+                        }}
                         type="button"
                         className="inline-flex justify-start w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       >
                         Pro Topics
-                        <svg
-                          className="-mr-1 ml-2 h-5 w-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path fillRule="evenodd" d="M10 14l6-6H4l6 6z" />
-                        </svg>
+                        {!isOpen3 ? (
+                          <svg
+                            className="-mr-1 ml-2 h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path fillRule="evenodd" d="M10 14l6-6H4l6 6z" />
+                          </svg>
+                        ) : (
+                          <svg
+                            className="-mr-1 ml-2 h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path fillRule="evenodd" d="M10 7l6+6H4l6 -6z" />
+                          </svg>
+                        )}
                       </button>
 
                       <div
@@ -128,6 +158,7 @@ const Navbar = () => {
                               href={`/${topic
                                 .toLowerCase()
                                 .replace(/\s+/g, "-")}`}
+                              onClick={() => setIsOpen2(!isOpen2)}
                             >
                               <span
                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-400"
@@ -152,6 +183,7 @@ const Navbar = () => {
                               href={`/${topic
                                 .toLowerCase()
                                 .replace(/\s+/g, "-")}`}
+                              onClick={() => setIsOpen3(!isOpen3)}
                             >
                               <span
                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
