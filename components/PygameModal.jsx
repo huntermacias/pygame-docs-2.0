@@ -3,14 +3,17 @@ import React, { useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { CodeIcon } from '@heroicons/react/solid';
 import GettingStarted from './GettingStarted';
+import Link from 'next/link';
 
 const PygameModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [myprompt, setPrompt] = useState('');
   const [code, setCode] = useState('');
+  const [userApiKey, setUserApiKey] = useState('');
 
+  const OPENAI_API_KEY = userApiKey || process.env.OPENAI_API_KEY;
+  console.log('data', OPENAI_API_KEY)
 
-  const OPENAI_API_KEY = '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';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,7 +32,6 @@ const PygameModal = () => {
       }),
     });
     const data = await response.json();
-    console.log('data', data)
     // console.log(data.choices);
     setCode(data.choices[0].text);
   };
@@ -89,6 +91,18 @@ const PygameModal = () => {
                 >
                   Generate Pygame Code
                 </Dialog.Title>
+                <div className="flex flex-col items-start">
+                <Link href="https://auth0.openai.com/u/login/identifier?state=hKFo2SBXY2ZPeUl4OHFWNmR1OF9YX3hqLTQ3VUJ3XzMtdHRWSKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHZQWWtaS1Itd1pIMzNpb25YY1pYY3M2d3dBbEd0QTZzo2NpZNkgRFJpdnNubTJNdTQyVDNLT3BxZHR3QjNOWXZpSFl6d0Q"
+                  htmlFor="userApiKey" className="text-sm font-medium text-gray-300">OpenAI API Key:</Link>
+                <input
+                  type="text"
+                  id="apiKey"
+                  name="apiKey"
+                  value={userApiKey}
+                  onChange={(e) => setUserApiKey(e.target.value)}
+                  className="w-full mt-2 px-3 py-2 text-white border rounded-lg focus:outline-none"
+                />
+              </div>
                 <div className="mt-2">
                   <p className="text-sm text-gray-300">
                     Please enter what you would like to learn in Pygame:
