@@ -17,14 +17,14 @@ const GettingStarted = ({ code }) => {
             value="gettingstarted"
             className="py-3 px-4 font-sm font-mono hover:text-gray-200 focus:outline-none focus-visible:underline"
           >
-            --
+            <button className="relative top-2 right-2 justify-end p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-600 focus:outline-none focus-visible:ring">
+              <FiCopy onClick={handleCopyClick} />
+            </button>
           </TabsTrigger>
         </TabsList>
         <TabsContent value="gettingstarted" className="py-4 px-6">
           <div className="">
-          <button className="relative top-2 right-2 justify-end p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-600 focus:outline-none focus-visible:ring">
-            <FiCopy onClick={handleCopyClick} />
-          </button>
+          
             <Code animated code={code} language="python" show />
           </div>
         </TabsContent>
