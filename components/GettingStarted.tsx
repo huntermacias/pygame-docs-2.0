@@ -9,9 +9,9 @@ const GettingStarted = ({ code }) => {
         <TabsList className="flex space-x-4 border-b-2 border-gray-700 pb-1">
           <TabsTrigger
             value="gettingstarted"
-            className="py-3 px-4 font-medium font-mono hover:text-gray-200 focus:outline-none focus-visible:underline"
+            className="py-3 px-4 font-small font-mono hover:text-gray-200 focus:outline-none focus-visible:underline"
           >
-            Getting Started
+            
           </TabsTrigger>
         </TabsList>
         <TabsContent value="gettingstarted" className="py-4 px-6">

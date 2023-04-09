@@ -19,7 +19,6 @@ export default function Home() {
   const [suggestions, setSuggestions] = useState<{ name: string, url: string }[]>([]);
   
 
- 
 
   const onSuggestionsFetchRequested = ({value}) => {
     const inputValue = value.trim().toLowerCase();
@@ -45,7 +44,7 @@ export default function Home() {
         <img src='https://pydocs.huntermacias.io/_next/image?url=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F2570%2F2570575.png&w=128&q=75' 
             alt='--' className="w-10 h-10 rounded-full mr-3" />
         <div className="text-white">
-          <p className="text-lg font-medium">{suggestion.name}</p>
+          <Link href={suggestion.url} className="text-lg font-medium">{suggestion.name}</Link>
           <p className="text-xs">pygame.{suggestion.name}</p>
         </div>
       </div>
