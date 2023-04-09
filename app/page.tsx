@@ -1,58 +1,109 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import GettingStarted from '../components/GettingStarted';
+import PygameModal from "../components/PygameModal"
 import { gettingstart } from '../helpers/documentation-code';
+import { useState } from 'react';
+import Autosuggest from 'react-autosuggest';
 
 export default function Home() {
+  const data = [
+    { name: 'Color', url: '/color' },
+    { name: 'Draw', url: '/draw' },
+    { name: 'Events', url: '/events' },
+    { name: 'Rect', url: '/rect' },
+  ];
+
+  const [value, setValue] = useState('');
+  const [suggestions, setSuggestions] = useState<{ name: string, url: string }[]>([]);
+  
+
+ 
+
+  const onSuggestionsFetchRequested = ({value}) => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    const matches = inputLength === 0 ? []
+      : data.filter(item =>
+          item.name.toLowerCase().slice(0, inputLength) === inputValue
+        );
+
+    setSuggestions(matches);
+  };
+
+  const onSuggestionsClearRequested = () => {
+    setSuggestions([]);
+  };
+
+  const getSuggestionValue = suggestion => suggestion.name;
+
+  const renderSuggestion = suggestion => {
+    return (
+      <div className="bg-gray-800 px-4 py-3 rounded-lg shadow-md">
+        <img src='https://pydocs.huntermacias.io/_next/image?url=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F2570%2F2570575.png&w=128&q=75' 
+            alt='--' className="w-10 h-10 rounded-full mr-3" />
+        <div className="text-white">
+          <p className="text-lg font-medium">{suggestion.name}</p>
+          <p className="text-xs">pygame.{suggestion.name}</p>
+        </div>
+      </div>
+    );
+  };
+  
+  
+
   return (
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       <header className="py-6">
-  <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center" aria-label="Top">
-    <div className="flex items-center">
-      <Link href="/about" className="ml-8 text-gray-400 hover:text-gray-200">
-        <span>
-          About
-        </span>
-      </Link>
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center" aria-label="Top">
+          <div className="flex items-center">
+            <Link href="/about" className="ml-8 text-gray-400 hover:text-gray-200">
+              <span>
+                About
+              </span>
+            </Link>
 
-      <Link href="https://www.pygame.org/docs/">
-        <span className="ml-8 text-gray-400 hover:text-gray-200"
-        >
-          Original Docs
-        </span>
-      </Link>
-
-      <Link href="https://github.com/huntermacias/revamed-pygame-docs">
-        <span className="ml-8 text-gray-400 hover:text-gray-200">
-          Contribute
-        </span>
-
-      </Link>
-    </div>
-
-    <div className="relative w-70 pt-4">
-              <input
-                className="bg-gray-800 text-white rounded-md pl-10 pr-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                type="text"
-                placeholder="Search..."
-              />
-              <svg
-                className="absolute top-6 left-2 h-6 w-6 text-gray-400"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+            <Link href="https://www.pygame.org/docs/">
+              <span className="ml-8 text-gray-400 hover:text-gray-200"
               >
-                <path
-                  className="heroicon-ui"
-                  d="M16.56 15.94l4.63 4.63a1 1 0 0 1-1.42 1.42l-4.63-4.63a8.5 8.5 0 1 1 1.42-1.42zM9.5 15.5a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
-                />
-              </svg>
-            </div>
-  </nav>
-</header>
+                Original Docs
+              </span>
+            </Link>
+
+            <Link href="https://github.com/huntermacias/revamed-pygame-docs">
+              <span className="ml-8 text-gray-400 hover:text-gray-200">
+                Contribute
+              </span>
+
+            </Link>
+          </div>
+
+          <div className="relative w-72 pt-4">
+            <Autosuggest
+              suggestions={suggestions}
+              onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+              onSuggestionsClearRequested={onSuggestionsClearRequested}
+              getSuggestionValue={getSuggestionValue}
+              renderSuggestion={renderSuggestion}
+              inputProps={{
+                placeholder: 'Search...',
+                value,
+                onChange: (_, { newValue }) => {
+                  setValue(newValue);
+                },
+                className: 'block w-full px-4 py-2 text-white placeholder-gray-500 rounded-md border-2 border-gray-800 focus:outline-none focus:border-blue-800',
+              }}
+            />  
+          </div>
+        </nav>
+      </header>
 
 
       <main className="max-w-7xl mx-auto px-4 lg:px-8 py-12 flex flex-col md:flex-row md:space-x-8">
         <div className="w-full md:w-4/5">
+          
           <h1 className="text-5xl font-bold mb-4">Welcome to Pygame Docs</h1>
           <p className="text-xl mb-8">
             Pygame is a set of Python modules designed for writing video games.
@@ -61,11 +112,9 @@ export default function Home() {
             language.
           </p>
 
-          <Link href="/">
-            <span className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-md">
-              Get Started
-            </span>
-          </Link>
+         
+          <PygameModal />
+          
 
           <div className="bg-gray-900 text-white py-12 mt-8 max-w-4xl mx-auto">
             <div className="px-4 sm:px-6 lg:px-8">
@@ -94,16 +143,16 @@ export default function Home() {
         <div className="w-full md:w-1/3 mt-8 md:mt-0">
           <div className="max-w-md mx-auto">
           <Image
-        src="https://uploads-ssl.webflow.com/61f7efd44d01cc87c88dc6f3/6318e21e7ee37e36ce16d836_Getting%20Started%20With%20Pygame%20For%20Kids%20blog01.jpg"
-        alt="Pygame Docs"
-        className="w-full rounded-md"
-        width={400}
-        height={400}
-      />
-    </div>
-  </div>
+            src="https://uploads-ssl.webflow.com/61f7efd44d01cc87c88dc6f3/6318e21e7ee37e36ce16d836_Getting%20Started%20With%20Pygame%20For%20Kids%20blog01.jpg"
+            alt="Pygame Docs"
+            className="w-full rounded-md"
+            width={400}
+            height={400}
+          />
+        </div>
+      </div>
 
-  </main>
+    </main>
 
 </div>
 );
