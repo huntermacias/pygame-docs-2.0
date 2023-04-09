@@ -4,6 +4,7 @@ import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import navigation  from './navigation'
+import GettingStarted from '../../components/GettingStarted';
 
 
 
@@ -60,7 +61,7 @@ function Topics() {
                     </svg>
                   </Disclosure.Button>
                   <Disclosure.Panel>
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                       {category.options.map((option) => {
                         const Icon = option.icon;
                         return (
@@ -82,9 +83,19 @@ function Topics() {
                               <h3 className="text-xl text-emerald-300">
                                 {option.name}
                               </h3>
-                              <p className="mt-2 text-mono text-xs text-gray-100">
-                                {option.description}
-                              </p>
+                             
+							  {option.description ? 
+							  	<p className="mt-2 text-mono text-xs text-gray-100">{option.description}</p> 
+								: 
+							  	<GettingStarted code={option.code} />
+								}
+                            
+							  {/* <div>
+								{option.name.length > 1 && (
+
+								)}
+
+							  </div> */}
                             </div>
                           </Link>
                         );
