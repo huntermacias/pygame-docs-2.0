@@ -103,27 +103,23 @@ const navigation = [
         name: 'Simple Object Class', 
         href: '/topics',
         icon: LightningBoltIcon,
-        code: `class Ball(pygame.sprite.Sprite):
-"""A ball that will move across the screen
-Returns: ball object
-Functions: update, calcnewpos
-Attributes: area, vector"""
+        code: `import pygame
 
-def __init__(self, vector):
-    pygame.sprite.Sprite.__init__(self)
-    self.image, self.rect = load_png('ball.png')
-    screen = pygame.display.get_surface()
-    self.area = screen.get_rect()
-    self.vector = vector
+# file - player.py
+
+class Player(pygame.sprite.Sprite):
+""" This class represents the player. """
+def __init__(self):
+    super().__init__()
+    self.image = pygame.Surface([20, 20])
+    self.image.fill(RED)
+    self.rect = self.image.get_rect()
 
 def update(self):
-    newpos = self.calcnewpos(self.rect,self.vector)
-    self.rect = newpos
-
-def calcnewpos(self,rect,vector):
-    (angle,z) = vector
-    (dx,dy) = (z*math.cos(angle),z*math.sin(angle))
-    return rect.move(dx,dy)
+    """ Update the player location. """
+    pos = pygame.mouse.get_pos()
+    self.rect.x = pos[0]
+    self.rect.y = pos[1]
         `
       },
     ],
