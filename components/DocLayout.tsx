@@ -22,30 +22,13 @@ const DocLayout = ({
             <div key={method.key}>
               <li className="py-4">
                 <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                      <svg
-                        className="h-6 w-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
+                  
+                  <div className="flex-1 min-w-0 py-4">
                     <p className="text-lg font-medium text-amber-300 truncate">
                       {method.title}
                     </p>
-                    <p className="mt-1 text-lg text-gray-300 font-mono">
-                      <span className="text-bold text-lg text-amber-400">
+                    <p className="mt-1 text-2lg text-gray-400 font-mono">
+                      <span className="text-bold text-lg text-gray-200">
                         Description:{" "}
                       </span>
                       {method.description}
@@ -58,7 +41,7 @@ const DocLayout = ({
           ))}
         </ul>
       </div>
-      <div className="mt-10 p-4 pb-40 text-white font-mono">
+      <div className="mt-10 p-4 pb-40 text-gray-500 font-mono">
         <TextBox
           title={description.title}
           description={description.description}

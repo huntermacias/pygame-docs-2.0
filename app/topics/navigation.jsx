@@ -28,6 +28,12 @@ const navigation = [
       icon: LightningBoltIcon,
     },
     {
+      name: 'Pygame.Surface',
+      description: 'Pygame.Surface: Draws a source Surface onto this Surface. The draw can be positioned with the dest argument.',
+      href: '/surface',
+      icon: LightningBoltIcon,
+    },
+    {
       name: 'Pygame.draw',
       description: 'Pygame.draw: Draw shapes, lines, and graphics on the screen.',
       href: '/draw',

@@ -27,6 +27,6 @@
     "**/*.tsx",
     "app/events/docs.js",
     "components/PygameModal.jsx"
-  ],
+, "app/mixer/page.jsx", "app/surface/page.jsx"  ],
   "exclude": ["node_modules"]
 }
