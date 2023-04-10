@@ -1,10 +1,7 @@
-// import LightningBoltIcon from './LightningBoltIcon';
-
-import GettingStarted from "../../components/GettingStarted";
 
 const LightningBoltIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" />
   </svg>
   );
 
@@ -12,61 +9,67 @@ const navigation = [
   {
     name: 'Beginner Topics',
     options: [
-      {
+    {
         name: 'Pygame.Color',
-        description: 'Learn how to work with colors in Pygame with this guide. This topic covers creating color objects, setting colors for surfaces, and using common color presets. Whether you are designing backgrounds, drawing shapes or creating custom sprites, understanding how to work with colors is essential to creating visually appealing games. Start learning with Pygame.Color now!',
+        description: "Pygame.colors: It's a collection of ready-made colors that you can use when creating graphics in Pygame.",
         href: '/color',
         icon: LightningBoltIcon,
-      },
-      {
-        name: 'Pygame.Rect',
-        description: 'Learn how to use Pygame.Rect for managing rectangular areas on the screen.',
-        href: '/rect',
-        icon: LightningBoltIcon,
-        },
-        {
-        name: 'Pygame.Display',
-        description: 'Learn how to use Pygame.Display to create and manage game windows and screens.',
-        href: '/display',
-        icon: LightningBoltIcon,
-        },
-        {
-        name: 'Pygame.Draw',
-        description: 'Learn how to use Pygame.Draw to draw shapes, lines, and other graphics on the screen.',
-        href: '/draw',
-        icon: LightningBoltIcon,
-        },
-        {
-        name: 'Pygame.Events',
-        description: 'Learn how to use Pygame.Events to handle events such as key presses and mouse clicks.',
-        href: '/events',
-        icon: LightningBoltIcon,
-        },
-        {
-        name: 'Pygame.Font',
-        description: 'Learn how to use Pygame.Font to render text on the screen with different fonts, sizes, and styles.',
-        href: '/font',
-        icon: LightningBoltIcon,
-        },
-        {
-        name: 'Pygame.Image',
-        description: 'Learn how to use Pygame.Image to load and display images on the screen.',
-        href: '/image',
-        icon: LightningBoltIcon,
-        },
-        {
-        name: 'Pygame.Time',
-        description: 'Learn how to use Pygame.Time to manage time and control the game loop.',
-        href: '/time',
-        icon: LightningBoltIcon,
-        },
-        {
-        name: 'Pygame.Mouse',
-        description: 'Learn how to use Pygame.Mouse to handle mouse input and get information about the mouse cursor.',
-        href: '/mouse',
-        icon: LightningBoltIcon,
-        },
-    ],
+    },
+	  {
+      name: 'Pygame.Rect',
+      description: 'Pygame.Rect: Manage rectangular areas on the screen.',
+      href: '/rect',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.display',
+      description: 'Pygame.display: Create and manage game windows and screens.',
+      href: '/display',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.draw',
+      description: 'Pygame.draw: Draw shapes, lines, and graphics on the screen.',
+      href: '/draw',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.event',
+      description: 'Pygame.event: Handle events such as key presses and mouse clicks.',
+      href: '/events',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.key',
+      description: 'Pygame.key: Handle keyboard related tasks.',
+      href: '/key',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.font',
+      description: 'Pygame.font: Render text on the screen with different fonts, sizes, and styles.',
+      href: '/font',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.image',
+      description: 'Pygame.image: Load and display images on the screen.',
+      href: '/image',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.time',
+      description: 'Pygame.time: Manage time and control the game loop.',
+      href: '/time',
+      icon: LightningBoltIcon,
+    },
+    {
+      name: 'Pygame.mouse',
+      description: 'Pygame.transform: Intermediate topic for using Pygame.transform.',
+      href: '/mouse',
+      icon: LightningBoltIcon,
+    },
+  ],
   },
   {
     name: 'Intermediate Topics',

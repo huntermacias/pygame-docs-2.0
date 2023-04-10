@@ -6,7 +6,6 @@ import PygameModal from "../components/PygameModal";
 import { gettingstart } from "../helpers/documentation-code";
 import { useState } from "react";
 import Autosuggest from "react-autosuggest";
-import { SearchIcon } from "lucide-react";
 
 export default function Home() {
   const data = [
@@ -75,59 +74,43 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white font-mono">
-      <header className="py-6 text-sm md:text-lg font-mono">
-        <nav
-          className="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8 flex flex-col sm:flex-row justify-between items-center"
-          aria-label="Top"
-        >
-          <div className="flex items-center">
-            <Link
-              href="/about"
-              className="ml-8 text-gray-400 hover:text-gray-200"
-            >
-              <span>About</span>
-            </Link>
+      <header className="py-6 text-sm md:text-lg font-mono bg-gray-900">
+  <nav className="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8 flex flex-col sm:flex-row justify-between items-center" aria-label="Top">
+    <div className="flex items-center">
+      <Link href="/about" className="ml-8 text-gray-400 hover:text-gray-200">
+        <span>About</span>
+      </Link>
+      <Link href="https://www.pygame.org/docs/">
+        <span className="ml-8 text-gray-400 hover:text-gray-200">Original Docs</span>
+      </Link>
+      <Link href="https://github.com/huntermacias/revamed-pygame-docs">
+        <span className="ml-8 text-gray-400 hover:text-gray-200">Contribute</span>
+      </Link>
+    </div>
+    <div className="relative p-2 pl-10 w-72">
+      <label htmlFor="search" className="sr-only">Search</label>
+      <Autosuggest
+        suggestions={suggestions}
+        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={onSuggestionsClearRequested}
+        getSuggestionValue={getSuggestionValue}
+        renderSuggestion={renderSuggestion}
+        inputProps={{
+          placeholder: "Search...",
+          value,
+          onChange: (_, { newValue }) => {
+            setValue(newValue);
+          },
+          id: "search",
+          className:
+            "block w-full px-4 py-2 text-white placeholder-gray-500 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-800",
+        }}
+      />
+    </div>
+  </nav>
+  </header> 
 
-            <Link href="https://www.pygame.org/docs/">
-              <span className="ml-8 text-gray-400 hover:text-gray-200">
-                Original Docs
-              </span>
-            </Link>
-
-            <Link href="https://github.com/huntermacias/revamed-pygame-docs">
-              <span className="ml-8 text-gray-400 hover:text-gray-200">
-                Contribute
-              </span>
-            </Link>
-          </div>
-
-          <div className="relative w-72">
-            <label htmlFor="search" className="sr-only">
-              Search
-            </label>
-            <Autosuggest
-              suggestions={suggestions}
-              onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-              onSuggestionsClearRequested={onSuggestionsClearRequested}
-              getSuggestionValue={getSuggestionValue}
-              renderSuggestion={renderSuggestion}
-              inputProps={{
-                placeholder: "Search...",
-                value,
-                onChange: (_, { newValue }) => {
-                  setValue(newValue);
-                },
-                id: "search",
-                className:
-                  "block w-full px-4 py-2 text-white placeholder-gray-500 rounded-md border-2 border-gray-300 focus:outline-none focus:border-blue-800",
-              }}
-            />
-            
-          </div>
-        </nav>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-4 lg:px-8 py-12 flex flex-col md:flex-row md:space-x-8">
+      <main className="max-w-7xl mx-auto px-4 lg:px-8 py-10 flex flex-col md:flex-row md:space-x-8">
         <div className="w-full md:w-4/5">
           <h1 className="text-2xl md:text-5xl font-bold mb-4 ">
             Welcome to Pygame Docs

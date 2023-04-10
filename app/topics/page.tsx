@@ -5,7 +5,7 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import navigation  from './navigation'
 import GettingStarted from '../../components/GettingStarted';
-
+import { ArrowCircleRightIcon } from '@heroicons/react/solid';
 
 
 function Topics() {
@@ -13,10 +13,10 @@ function Topics() {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 font-mono">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-extrabold text-white">
-          Browse Pygame Methods
+          Browse Pygame Documentation + Examples
         </h2>
-        <p className="mt-4 text-lg text-gray-300">
-          Start learning with our handpicked topics
+        <p className="mt-4 text-lg text-amber-300">
+          Learn how to use the pygame library!
         </p>
       </div>
       <div className="mt-12">
@@ -35,30 +35,14 @@ function Topics() {
                       
                     )}
                   >
-                    <span className="text-xl">
+                    <span className="text-xl text-gray-200 font-light">
                       {category.name}
                     </span>
-                    <svg
-                      className={classNames(
-                        'transform',
-                        'transition-transform',
-                        'text-white',
-						'bg-gray-300',
-						'rounded-lg',
-						'pl-1',
-                        {
-                          '-rotate-180': open,
-                        },
-                      )}
-                      width={24}
-                      height={24}
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.293 7.707a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L10 10.586l-4.293-4.293z"
-                      />
-                    </svg>
+
+						<ArrowCircleRightIcon 
+							className={`w-8 h-8 transform transition-transform text-white 
+							bg-gray-600 shadow-lg hover:bg-gray-400 rounded-lg pl-1 rotate-90`} 
+						/>
                   </Disclosure.Button>
                   <Disclosure.Panel>
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -70,18 +54,15 @@ function Topics() {
                             href={option.href}
                             className="flex flex-col bg-gray-900 border rounded-lg shadow-sm overflow-hidden transition duration-150 ease-in-out sm:mx-auto sm:w-full hover:shadow-lg"
                           >
-                            <div className="flex-shrink-0 bg-gray-100 p-4">
+                            <div className="flex-shrink-0 bg-emerald-400/10 p-4">
 								<div className="h-6 w-6 text-gray-400">
-									<Icon
-										
-										aria-hidden="true"
-									/>
+									<Icon aria-hidden="true" />
 
 								</div>
                             </div>
                             <div className="flex-1 p-4">
                               <h3 className="text-xl text-emerald-300">
-                                {option.name}
+                                <span className='text-amber-200'>{option.name}</span>
                               </h3>
                              
 							  {option.description ? 
@@ -89,13 +70,6 @@ function Topics() {
 								: 
 							  	<GettingStarted code={option.code} />
 								}
-                            
-							  {/* <div>
-								{option.name.length > 1 && (
-
-								)}
-
-							  </div> */}
                             </div>
                           </Link>
                         );

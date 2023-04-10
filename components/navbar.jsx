@@ -7,27 +7,6 @@ import Link from "next/link";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-
-  const BegTopics = [
-    "Color",
-    "Display",
-    "Draw",
-    "Events",
-    "Font",
-    "Image",
-    "Key",
-    "Locals",
-    "Mixer",
-    "Mouse",
-    "Rect",
-    "Surface",
-    "Time",
-    "Music",
-    "Pygame",
-  ];
-
-  const InterTopics = ["Cursors", "Sprites"];
-
   return (
     <nav className="bg-gray-800 shadow-lg text-white font-mono">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,6 +58,13 @@ const Navbar = () => {
               Donate
             </Link>
             <Link
+              href="/learn"
+              className="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-white"
+            >
+              Learn
+
+            </Link>
+            {/* <Link
               href="/"
               className="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-white"
             >
@@ -89,7 +75,7 @@ const Navbar = () => {
               className="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
             >
               Sign up
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
