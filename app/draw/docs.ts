@@ -1,21 +1,31 @@
-export const examples = [
+export type Info = {
+	title: string;
+	description: string;
+	key: string;
+	codesample: string;
+  };
+  const data: Info[] = [
 	{
-		name: `pygame.draw`,
-		code: `pygame module for drawing shapes
+		title: `pygame.draw`,
+		description: '',
+		key: '1',
+		codesample: `pygame module for drawing shapes
 		`
 	},
     {
-      name: 'pygame.draw.rect() - Rect',
-      code: `PARAMETERS: (surface, color, rect)
+		title: 'pygame.draw.rect() - Rect',
+		description: '',
+		key: '2',
+      	codesample: `'''PARAMETERS: (surface, color, rect)
 	surface: (Surface) -- surface to draw on
 	color: (Color/Int or tuple(int, int, int))
 	rect: (Rect) -- rectangle to draw, pos & dimensions
 	width: (int) -- optional
 if width == 0, (default) - fill rectangle
 if width > 0, used for line thickness
-if width < 0, nothing will be drawn
+if width < 0, nothing will be drawn'''
 
-CODE:
+# code:
 	  
 myrect = pygame.Rect(left, top, width, height)
 red = (255, 0, 0)
@@ -30,8 +40,10 @@ pygame.draw.rect(screen, red, rect, width=0, border_radius=0,
 	  `
     },
 	{
-		name: 'pygame.draw.polygon() - Rect',
-		code: `PARAMETERS: (surface, color, points)
+		title: 'pygame.draw.polygon() - Rect',
+		description: '',
+		key: '3',
+		codesample: `'''PARAMETERS: (surface, color, points)
 	surface: (Surface) -- surface to draw on
 	color: (Color/Int or tuple(int, int, int))
 	points: (tuple / list) -- a sequence of 3 or more (x, y) coordinates
@@ -41,9 +53,9 @@ pygame.draw.rect(screen, red, rect, width=0, border_radius=0,
 	width (int) -- optional
 if width == 0, (default) - fill polygon
 if width > 0, used for line thickness
-if width < 0, nothing will be drawn
+if width < 0, nothing will be drawn'''
 	
-CODE:
+# code:
 		
 mypoints = [(x1, y1), (x2, y2), (x3, y3)]
 red = (255, 0, 0)
@@ -53,8 +65,10 @@ pygame.draw.polygon(screen, red, mypoints)
 		`,
 	},
 	{
-		name: 'pygame.draw.circle() - Rect',
-		code: `PARAMETERS: (surface, color, center, radius)
+		title: 'pygame.draw.circle() - Rect',
+		description: '',
+		key: '4',
+		codesample: `'''PARAMETERS: (surface, color, center, radius)
 	surface: (Surface) -- surface to draw on
 	color: (Color/Int or tuple(int, int, int))
 	center: tuple(int/float, int/float) -- center point of the
@@ -64,9 +78,9 @@ pygame.draw.polygon(screen, red, mypoints)
 	width (int) -- optional
 if width == 0, (default) - fill circle
 if width > 0, used for line thickness
-if width < 0, nothing will be drawn
+if width < 0, nothing will be drawn'''
 	
-CODE:
+# code:
 		
 mypoints = (x,y)
 red = (255, 0, 0)
@@ -76,3 +90,10 @@ pygame.draw.circle(screen, red, mypoints, 5)
 		`,
 	  },
   ];
+
+const description = {
+	title: "pygame.color Module",
+	description: "Welcome to the Pygame color module! pygame.Color is a module that provides various color-related functions and methods for working with colors in Pygame.",
+};
+
+export { data, description };

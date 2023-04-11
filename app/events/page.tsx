@@ -1,29 +1,19 @@
 'use client'
-import { Fragment } from 'react';
-import GettingStarted from '../../components/GettingStarted';
-import { examples } from './docs'
 
-const EventExamples = () => {
+import { data, description } from "./docs"
+import DocLayout from '../../components/DocLayout';
 
+const eventPage = () => {
 
   return (
-    <div className="mx-auto max-w-2xl p-6 mb-10">
-      <h1 className="text-3xl font-bold font-mono mb-6 text-amber-300">Examples for pygame.Event</h1>
-      {examples.map((example) => (
-        <Fragment key={example.name}>
-          <h2 className="text-xl font-bold font-mono mb-2 text-amber-300">{example.name}</h2>
-		  <div className='text-white text-sm'>
-
-		  	<GettingStarted code={example.code} />
-		  </div>
-        </Fragment>
-      ))}
-
-	  <div></div>
-	
-    </div>
+    <DocLayout 
+      title={description.title} 
+      baseDescription={description.description} 
+      data={data} 
+      description={description} 
+    />
 
   );
 };
 
-export default EventExamples;
+export default eventPage;
