@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
      
-      <body className='bg-gray-900 h-screen'>
+      <div className='bg-gray-900 h-screen'>
         {/* <nav></nav> */}
         <Navbar />  
         
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
         
-      </body>
+      </div>
     </html>
   )
 }

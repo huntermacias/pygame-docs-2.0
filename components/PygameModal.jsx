@@ -93,7 +93,7 @@ const PygameModal = () => {
                 </Dialog.Title>
                 <div className="flex flex-col items-start">
                 <Link href="https://auth0.openai.com/u/login/identifier?state=hKFo2SBXY2ZPeUl4OHFWNmR1OF9YX3hqLTQ3VUJ3XzMtdHRWSKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHZQWWtaS1Itd1pIMzNpb25YY1pYY3M2d3dBbEd0QTZzo2NpZNkgRFJpdnNubTJNdTQyVDNLT3BxZHR3QjNOWXZpSFl6d0Q"
-                  htmlFor="userApiKey" className="text-sm font-medium text-gray-300">OpenAI API Key:</Link>
+                   className="text-sm font-medium text-gray-300">OpenAI API Key:</Link>
                 <input
                   type="text"
                   id="apiKey"
