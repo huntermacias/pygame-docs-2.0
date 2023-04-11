@@ -1,5 +1,11 @@
-export const examples = [
-    {
+export type Info = {
+	title: string;
+	description: string;
+	key: string;
+	codesample: string;
+  };
+  const data: Info[] = [
+	{
       title: ' Color.update(r, g, b, a) - None',
       description: 'Sets the color to the given RGBA value.',
       key: '1',
@@ -61,3 +67,12 @@ export const examples = [
     }
 
   ];
+const description = {
+  title: "pygame.color Module",
+  description:
+    "Welcome to the Pygame color module! pygame.Color is a module that provides various color-related functions and methods for working with colors in Pygame.",
+  };
+  
+  export { data, description };
+
+ 

@@ -3,7 +3,7 @@
 import { data, description } from "./docs"
 import DocLayout from '../../components/DocLayout';
 
-const KeyPage = () => {
+const ImagePage = () => {
 
   return (
     <DocLayout 
@@ -16,4 +16,4 @@ const KeyPage = () => {
   );
 };
 
-export default KeyPage;
+export default ImagePage;

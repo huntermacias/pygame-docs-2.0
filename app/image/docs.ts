@@ -22,7 +22,7 @@ SVG (limited support, using Nano SVG)
 TGA (uncompressed)
 TIFF
 WEBP
-XPM
+XPM.
 New in Pygame 2.0: Loading SVG, WebP, PNM 
 	  `,
     },
