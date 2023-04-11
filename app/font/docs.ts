@@ -1,8 +1,13 @@
-export const examples = [
-
-    {
-      name: 'pygame.font.Font()',
-      code: `import pygame
+export type Info = {
+	title: string;
+	description: string;
+	key: string;
+	codesample: string;
+  };
+  const data: Info[] = [
+	{
+      title: 'pygame.font.Font()',
+      codesample: `import pygame
 
 pygame.init()
 
@@ -14,24 +19,24 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 
 # alternatively you can use your systems default font by specificying None
 font = pygame.font.Font(None, 32)`,
-	  title: 'Returns - Font',
+	  key: '1',
 	  description: 'create a new Font object from a file'
     },
 	{
-		name: 'pygame.font_get_fonts()',
-		code: `import pygame
+		title: 'pygame.font_get_fonts()',
+		codesample: `import pygame
 
 pygame.init()
 
 myFonts = pygame.font_get_fonts()
 for font in myFonts:
 	print(f'font name: {font}')`,
-		title: 'Returns - Font List',
+		key: '2',
 		description: 'If you’re not looking to be including any ttf files in your code, we then turn to using pygame.font.SysFont(). This is the method I personally recommend and use in my own pygame programs. A good strategy is to first find the fonts supported by the system the code is executing on. The pygame.font.get_fonts() function will return a list of all the names of the fonts it can find on your system.'
 	  },
 	  {
-		name: 'pygame.font_get_fonts()',
-		code: `import pygame
+		title: 'pygame.font_get_fonts()',
+		codesample: `import pygame
  
 pygame.init()
 screen = pygame.display.set_mode((400, 400))
@@ -60,7 +65,14 @@ while True:
 		
 	pygame.display.flip()
 	clock.tick(60)`,
-		title: 'Returns - Font',
+		key: '3',
 		description: 'Return a new Font object that is loaded from the system fonts. The font will match the requested bold and italic flags. Pygame uses a small set of common font aliases. If the specific font you ask for is not available, a reasonable alternative may be used. If a suitable system font is not found this will fall back on loading the default pygame font. The font name can also be an iterable of font names, a string of comma-separated font names, or a bytes of comma-separated font names, in which case the set of names will be searched in order.'
 	  },
   ];
+
+const description = {
+	title: "pygame.font Module",
+	description: "Welcome to the Pygame font module! The pygame.font module allows for rendering TrueType fonts into Surface objects. This module is built on top of the SDL_ttf library, which comes with all normal pygame installations.",
+};
+
+export { data, description };
