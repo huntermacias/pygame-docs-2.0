@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 shadow-lg text-white font-mono">
+    <div className="bg-gray-800 shadow-lg text-white font-mono">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -116,7 +116,7 @@ const Navbar = () => {
           Sign up
         </Link>
       </div>
-    </nav>
+    </div>
   );
 };
 export default Navbar;

@@ -3,7 +3,7 @@
 import { data, description } from "./docs"
 import DocLayout from '../../components/DocLayout';
 
-const eventPage = () => {
+const fontPage = () => {
 
   return (
     <DocLayout 
@@ -16,4 +16,4 @@ const eventPage = () => {
   );
 };
 
-export default eventPage;
+export default fontPage;

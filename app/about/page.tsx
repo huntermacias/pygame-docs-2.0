@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 const AboutPage = () => {
   return (
@@ -35,12 +36,12 @@ const AboutPage = () => {
               to improve Pygame Docs and add new features to make it even more
               useful. If you have any feedback or suggestions, please do not
               hesitate to{" "}
-              <a
+              <Link
                 href="huntermacias20@gmail.com"
                 className="text-emerald-400 hover:text-emerald-300"
               >
                 contact us
-              </a>
+              </Link>
               !
             </p>
           </div>
@@ -57,12 +58,12 @@ const AboutPage = () => {
             <p className="text-lg text-gray-200 mb-6">
               If you are interested in joining our team or contributing to
               Pygame Docs in any way, please{" "}
-              <a
+              <Link
                 href="huntermacias20@gmail.com"
                 className="text-emerald-400 hover:text-emerald-300"
               >
                 contact us
-              </a>
+              </Link>
               ! We would love to hear from you.
             </p>
           </div>

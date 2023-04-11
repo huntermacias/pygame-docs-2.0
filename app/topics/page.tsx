@@ -4,11 +4,11 @@ import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import navigation  from './navigation'
-import GettingStarted from '../../components/GettingStarted';
 import { ArrowCircleRightIcon } from '@heroicons/react/solid';
+import GettingStarted from '../../components/GettingStarted';
 
 
-function Topics() {
+const topics = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 font-mono">
       <div className="max-w-3xl mx-auto text-center">
@@ -85,4 +85,4 @@ function Topics() {
     </div>
   );
 }
-export default Topics;
+export default topics;
