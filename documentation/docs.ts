@@ -76,99 +76,99 @@ const colorDescription = {
 
 
 
-  export type displayInfo = {
-	title: string;
-	description: string;
-	key: string;
-	codesample: string;
-    };
-  const displayData: displayInfo[] = [
-	{
-	  title: " display.init() - None",
-	  description: "Initializes the display module",
-	  key: "1",
-	  codesample: "display.init()",
-	},
-	{
-	  title: " display.quit() - None",
-	  description: "Uninitializes the display module",
-	  key: "2",
-	  codesample: "display.quit()",
-	},
-	{
-	  title: " display.get_init() - bool",
-	  description: "Returns True if the display module has been initialized",
-	  key: "3",
-	  codesample: "display.get_init()",
-	},
-	{
-	  title: " display.set_mode(size, flags=0, depth=0) - Surface",
-	  description: "Creates a display Surface and returns it",
-	  key: "4",
-	  codesample: "display.set_mode((800, 600))",
-	},
-	{
-	  title: " display.get_surface() - Surface",
-	  description: "Returns the display Surface",
-	  key: "5",
-	  codesample: "display.get_surface()",
-	},
-	{
-	  title: " display.flip() - None",
-	  description: "Updates portions of the screen",
-	  key: "6",
-	  codesample: "display.flip()",
-	},
-	{
-	  title: " display.update(rectangle=None) - None",
-	  description: "Updates portions of the screen for software displays",
-	  key: "7",
-	  codesample: "display.update()",
-	},
-	{
-	  title: " display.Info() - VideoInfo",
-	  description: "Create a video display information object", // TODO - add more info
-	  key: "8",
-	  codesample: "display.Info()",
-	},
-    ];
-  const displayDescription = {
-	title: "pygame display Description",
-	description:
-	  "pygame.display is a module that allows you to control the display window and screen",
-    };
+export type displayInfo = {
+title: string;
+description: string;
+key: string;
+codesample: string;
+  };
+const displayData: displayInfo[] = [
+{
+  title: " display.init() - None",
+  description: "Initializes the display module",
+  key: "1",
+  codesample: "display.init()",
+},
+{
+  title: " display.quit() - None",
+  description: "Uninitializes the display module",
+  key: "2",
+  codesample: "display.quit()",
+},
+{
+  title: " display.get_init() - bool",
+  description: "Returns True if the display module has been initialized",
+  key: "3",
+  codesample: "display.get_init()",
+},
+{
+  title: " display.set_mode(size, flags=0, depth=0) - Surface",
+  description: "Creates a display Surface and returns it",
+  key: "4",
+  codesample: "display.set_mode((800, 600))",
+},
+{
+  title: " display.get_surface() - Surface",
+  description: "Returns the display Surface",
+  key: "5",
+  codesample: "display.get_surface()",
+},
+{
+  title: " display.flip() - None",
+  description: "Updates portions of the screen",
+  key: "6",
+  codesample: "display.flip()",
+},
+{
+  title: " display.update(rectangle=None) - None",
+  description: "Updates portions of the screen for software displays",
+  key: "7",
+  codesample: "display.update()",
+},
+{
+  title: " display.Info() - VideoInfo",
+  description: "Create a video display information object", // TODO - add more info
+  key: "8",
+  codesample: "display.Info()",
+},
+  ];
+const displayDescription = {
+title: "pygame display Description",
+description:
+  "pygame.display is a module that allows you to control the display window and screen",
+  };
 
 
 
-  export type drawInfo = {
-    title: string;
-    description: string;
-    key: string;
-    codesample: string;
-    };
-  const drawData: drawInfo[] = [
+export type drawInfo = {
+  title: string;
+  description: string;
+  key: string;
+  codesample: string;
+  };
+const drawData: drawInfo[] = [
+{
+  title: `pygame.draw`,
+  description: '',
+  key: '1',
+  codesample: `pygame module for drawing shapes
+  `
+},
   {
-    title: `pygame.draw`,
-    description: '',
-    key: '1',
-    codesample: `pygame module for drawing shapes
-    `
-  },
-    {
-    title: 'pygame.draw.rect() - Rect',
-    description: '',
-    key: '2',
-        codesample: `'''PARAMETERS: (surface, color, rect)
-  surface: (Surface) -- surface to draw on
-  color: (Color/Int or tuple(int, int, int))
-  rect: (Rect) -- rectangle to draw, pos & dimensions
-  width: (int) -- optional
+  title: 'pygame.draw.rect() - Rect',
+  description: '',
+  key: '2',
+      codesample: `'''PARAMETERS: (surface, color, rect)
+surface: (Surface) -- surface to draw on
+color: (Color/Int or tuple(int, int, int))
+rect: (Rect) -- rectangle to draw, pos & dimensions
+width: (int) -- optional
 if width == 0, (default) - fill rectangle
 if width > 0, used for line thickness
 if width < 0, nothing will be drawn'''
 
 # code:
-    
+  
 myrect = pygame.Rect(left, top, width, height)
 red = (255, 0, 0)
 
@@ -177,66 +177,66 @@ pygame.draw.rect(screen, red, myrect)
 
 # Example 2
 pygame.draw.rect(screen, red, rect, width=0, border_radius=0, 
-  border_top_left_radius=-1 border_top_right_radius=01, 
-  border_bottom_left_radius=-1, border_bottom_right_radius=-1)
-    `
-    },
-  {
-    title: 'pygame.draw.polygon() - Rect',
-    description: '',
-    key: '3',
-    codesample: `'''PARAMETERS: (surface, color, points)
-  surface: (Surface) -- surface to draw on
-  color: (Color/Int or tuple(int, int, int))
-  points: (tuple / list) -- a sequence of 3 or more (x, y) coordinates
-    ...that make up vertices of the polygon. Each coordinate in the
-    ...sequence must be a tuple/list/pygame.math.Vector2 of 
-    ...2 ints/floats, e.g [(x,y), (x2,y2), (xN, yN)]
-  width (int) -- optional
+border_top_left_radius=-1 border_top_right_radius=01, 
+border_bottom_left_radius=-1, border_bottom_right_radius=-1)
+  `
+  },
+{
+  title: 'pygame.draw.polygon() - Rect',
+  description: '',
+  key: '3',
+  codesample: `'''PARAMETERS: (surface, color, points)
+surface: (Surface) -- surface to draw on
+color: (Color/Int or tuple(int, int, int))
+points: (tuple / list) -- a sequence of 3 or more (x, y) coordinates
+  ...that make up vertices of the polygon. Each coordinate in the
+  ...sequence must be a tuple/list/pygame.math.Vector2 of 
+  ...2 ints/floats, e.g [(x,y), (x2,y2), (xN, yN)]
+width (int) -- optional
 if width == 0, (default) - fill polygon
 if width > 0, used for line thickness
 if width < 0, nothing will be drawn'''
-  
+
 # code:
-    
+  
 mypoints = [(x1, y1), (x2, y2), (x3, y3)]
 red = (255, 0, 0)
 
 # Example 1
 pygame.draw.polygon(screen, red, mypoints)
-    `,
-  },
-  {
-    title: 'pygame.draw.circle() - Rect',
-    description: '',
-    key: '4',
-    codesample: `'''PARAMETERS: (surface, color, center, radius)
-  surface: (Surface) -- surface to draw on
-  color: (Color/Int or tuple(int, int, int))
-  center: tuple(int/float, int/float) -- center point of the
-    ... cirlce as a sequence of 2 ints/floats e.g (x,y)
-  radius (int/float) -- radius of the circle, measured from the center. 
-    ... nothing will be drawn if the radius is less than 1
-  width (int) -- optional
+  `,
+},
+{
+  title: 'pygame.draw.circle() - Rect',
+  description: '',
+  key: '4',
+  codesample: `'''PARAMETERS: (surface, color, center, radius)
+surface: (Surface) -- surface to draw on
+color: (Color/Int or tuple(int, int, int))
+center: tuple(int/float, int/float) -- center point of the
+  ... cirlce as a sequence of 2 ints/floats e.g (x,y)
+radius (int/float) -- radius of the circle, measured from the center. 
+  ... nothing will be drawn if the radius is less than 1
+width (int) -- optional
 if width == 0, (default) - fill circle
 if width > 0, used for line thickness
 if width < 0, nothing will be drawn'''
-  
+
 # code:
-    
+  
 mypoints = (x,y)
 red = (255, 0, 0)
 
 # Example 1
 pygame.draw.circle(screen, red, mypoints, 5)
-    `,
-    },
-    ];
+  `,
+  },
+  ];
 
-  const drawDescription = {
-    title: "pygame.draw Module",
-    description: "Welcome to the Pygame draw module!",
-    };
+const drawDescription = {
+  title: "pygame.draw Module",
+  description: "Welcome to the Pygame draw module!",
+  };
 
 
 
@@ -802,106 +802,106 @@ const mouseDescription = {
   };
 
 
-  export type RectInfo = {
-    title: string;
-    description: string;
-    key: string;
-    codesample:
-     string;
-    };
-  const RectData: RectInfo[] = [
+export type RectInfo = {
+  title: string;
+  description: string;
+  key: string;
+  codesample:
+    string;
+  };
+const RectData: RectInfo[] = [
+  {
+  title: 'Virtual Attributes - Used to move/align rect objects',
+  key: '1',
+  description: 'Defines virtual attributes to move or align rect objects within the game window. These attributes include coordinates, size, and positions.',
+  codesample: `x,y top, left, bottom, right 
+topleft, bottomleft, topright, bottomright 
+midtop, midleft, midbottom, midright center, 
+centerx, centery size, width, height w,h`
+  },
+  {
+  title: 'pygame.Rect()',
+  key: '2',
+  description: 'Creates a rect object with the specified size and position. The rect object is commonly used for collision detection and object movement.',
+  codesample: 'rect = Rect(left, top, width, height)',
+  },
+  {
+  title: 'Getting and setting Rect attributes',
+  key: '3',
+  description: 'Provides a way to access and modify various attributes of a rect object, such as its position and size.',
+  codesample: `rect.left = x 
+rect.top = y 
+rect.width = w 
+rect.height = h 
+x = rect.left 
+y = rect.top 
+w = rect.width 
+h = rect.height`,
+  },
+  {
+  title: 'Getting Rect position and size as a tuple',
+  key: '4',
+  description: 'Returns the position and size of a rect object as a tuple.',
+  codesample: `pos = rect.topleft 
+size = rect.size`,
+  },
     {
-    title: 'Virtual Attributes - Used to move/align rect objects',
-    key: '1',
-    description: 'Defines virtual attributes to move or align rect objects within the game window. These attributes include coordinates, size, and positions.',
-    codesample: `x,y top, left, bottom, right 
-  topleft, bottomleft, topright, bottomright 
-  midtop, midleft, midbottom, midright center, 
-  centerx, centery size, width, height w,h`
+      title: 'Moving a Rect',
+      key: '5',
+      description: 'Same as the Rect.move() method, but operates in place.',
+      codesample: `rect.move_ip(x, y)
+rect.move_ip((x, y))
+
+# increasing rect's x & y position
+rect.x += 10
+rect.y += 10`,
     },
     {
-    title: 'pygame.Rect()',
-    key: '2',
-    description: 'Creates a rect object with the specified size and position. The rect object is commonly used for collision detection and object movement.',
-    codesample: 'rect = Rect(left, top, width, height)',
+      title: 'Centering a Rect',
+      key: '6',
+      description: 'Use the Rect objects virtual attributes to center its position',
+      codesample: `rect.centerx = x
+rect.centery = y
+rect.center = (x, y)`,
     },
     {
-    title: 'Getting and setting Rect attributes',
-    key: '3',
-    description: 'Provides a way to access and modify various attributes of a rect object, such as its position and size.',
-    codesample: `rect.left = x 
-  rect.top = y 
-  rect.width = w 
-  rect.height = h 
-  x = rect.left 
-  y = rect.top 
-  w = rect.width 
-  h = rect.height`,
+      title: 'Checking if two Rects intersect',
+      key: '7',
+      description: 'Returns true if any portion of either rectangle overlap (except the top+bottom or left+right edges).',
+      codesample: 'rect1.colliderect(rect2)',
     },
     {
-    title: 'Getting Rect position and size as a tuple',
-    key: '4',
-    description: 'Returns the position and size of a rect object as a tuple.',
-    codesample: `pos = rect.topleft 
-  size = rect.size`,
+      title: 'Checking if a point is inside a Rect',
+      key: '8',
+      description: 'Returns true if the given point is inside the rectangle. A point along the right or bottom edge is not considered to be inside the rectangle.',
+      codesample: 'rect.collidepoint(x, y)',
     },
-      {
-        title: 'Moving a Rect',
-        key: '5',
-        description: 'Same as the Rect.move() method, but operates in place.',
-        codesample: `rect.move_ip(x, y)
-  rect.move_ip((x, y))
-  
-  # increasing rect's x & y position
-  rect.x += 10
-  rect.y += 10`,
-      },
-      {
-        title: 'Centering a Rect',
-        key: '6',
-        description: 'Use the Rect objects virtual attributes to center its position',
-        codesample: `rect.centerx = x
-  rect.centery = y
-  rect.center = (x, y)`,
-      },
-      {
-        title: 'Checking if two Rects intersect',
-        key: '7',
-        description: 'Returns true if any portion of either rectangle overlap (except the top+bottom or left+right edges).',
-        codesample: 'rect1.colliderect(rect2)',
-      },
-      {
-        title: 'Checking if a point is inside a Rect',
-        key: '8',
-        description: 'Returns true if the given point is inside the rectangle. A point along the right or bottom edge is not considered to be inside the rectangle.',
-        codesample: 'rect.collidepoint(x, y)',
-      },
-      {
-        title: 'Inflating a Rect',
-        key: '9',
-        description: 'Same as the Rect.inflate() method, but operates in place.',
-        codesample: `rect.inflate_ip(x, y)
-  rect.inflate_ip((x, y))`,
-      },
-      {
-        title: 'Clipping a Rect to a Surface',
-        key: '10',
-        description: 'Returns a new rectangle that is cropped to be completely inside the argument Rect. If the two rectangles do not overlap to begin with, a Rect with 0 size is returned.',
-        codesample: 'rect.clip(surface.get_rect())',
-      },
-      {
-        title: 'Converting a Rect to a normalized form',
-        key: '11',
-        description: 'This will flip the width or height of a rectangle if it has a negative size. The rectangle will remain in the same place, with only the sides swapped.',
-        codesample: 'rect.normalize()',
-      },
-    ];
-  
-  const RectDescription = {
-    title: "pygame.Rect Module",
-    description:
-      "Pygame uses Rect objects to store and manipulate rectangular areas. A Rect can be created from a combination of left, top, width, and height values. Rects can also be created from python objects that are already a Rect or have an attribute named 'rect'. Any pygame function that requires a Rect argument also accepts any of these values to construct a Rect. This makes it easier to create Rects on the fly as arguments to functions. The Rect functions that change the position or size of a Rect return a new copy of the Rect with the affected changes. The original Rect is not modified. Some methods have an alternate 'in-place' version that returns None but affects the original Rect. These 'in-place' methods are denoted with the 'ip' suffix.",
-    };
+    {
+      title: 'Inflating a Rect',
+      key: '9',
+      description: 'Same as the Rect.inflate() method, but operates in place.',
+      codesample: `rect.inflate_ip(x, y)
+rect.inflate_ip((x, y))`,
+    },
+    {
+      title: 'Clipping a Rect to a Surface',
+      key: '10',
+      description: 'Returns a new rectangle that is cropped to be completely inside the argument Rect. If the two rectangles do not overlap to begin with, a Rect with 0 size is returned.',
+      codesample: 'rect.clip(surface.get_rect())',
+    },
+    {
+      title: 'Converting a Rect to a normalized form',
+      key: '11',
+      description: 'This will flip the width or height of a rectangle if it has a negative size. The rectangle will remain in the same place, with only the sides swapped.',
+      codesample: 'rect.normalize()',
+    },
+  ];
+
+const RectDescription = {
+  title: "pygame.Rect Module",
+  description:
+    "Pygame uses Rect objects to store and manipulate rectangular areas. A Rect can be created from a combination of left, top, width, and height values. Rects can also be created from python objects that are already a Rect or have an attribute named 'rect'. Any pygame function that requires a Rect argument also accepts any of these values to construct a Rect. This makes it easier to create Rects on the fly as arguments to functions. The Rect functions that change the position or size of a Rect return a new copy of the Rect with the affected changes. The original Rect is not modified. Some methods have an alternate 'in-place' version that returns None but affects the original Rect. These 'in-place' methods are denoted with the 'ip' suffix.",
+  };
 
 
 export type surfaceInfo = {
