@@ -1,5 +1,5 @@
 'use client'
-import { data, timeDescription } from './docs'
+import { timeData, timeDescription } from "./../../documentation/docs"
 import DocLayout from '../../components/DocLayout';
 
 const TimeExamples = () => {
@@ -10,7 +10,7 @@ const TimeExamples = () => {
     <DocLayout 
       title={timeDescription.title} 
       baseDescription={timeDescription.description} 
-      data={data} 
+      data={timeData} 
       description={timeDescription} 
     />
 

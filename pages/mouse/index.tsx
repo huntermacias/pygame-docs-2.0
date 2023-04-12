@@ -1,16 +1,16 @@
 'use client'
 
-import { data, description } from "./docs"
+import { mouseData, mouseDescription } from "./../../documentation/docs"
 import DocLayout from '../../components/DocLayout';
 
 const MousePage = () => {
 
   return (
     <DocLayout 
-      title={description.title} 
-      baseDescription={description.description} 
-      data={data} 
-      description={description} 
+      title={mouseDescription.title} 
+      baseDescription={mouseDescription.description} 
+      data={mouseData} 
+      description={mouseDescription} 
     />
 
   );

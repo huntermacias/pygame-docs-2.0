@@ -17,23 +17,33 @@ const PygameModal = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch('https://api.openai.com/v1/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        prompt: myprompt,
-        model: 'text-davinci-002',
-        max_tokens: 1024,
-        n: 1,
-        
-      }),
-    });
-    const data = await response.json();
-    // console.log(data.choices);
-    setCode(data.choices[0].text);
+    try {
+      const response = await fetch('https://api.openai.com/v1/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${OPENAI_API_KEY}`,
+        },
+        body: JSON.stringify({
+          prompt: myprompt,
+          model: 'text-davinci-002',
+          max_tokens: 1024,
+          n: 1,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      if (data.choices && data.choices[0] && data.choices[0].text) {
+        setCode(data.choices[0].text);
+      } else {
+        throw new Error('Invalid response data');
+      }
+    } catch (error) {
+      console.error(error);
+      // Respond to the error as appropriate
+    }
   };
 
 

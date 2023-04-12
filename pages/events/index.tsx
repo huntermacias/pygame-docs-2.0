@@ -1,16 +1,16 @@
 'use client'
 
-import { data, description } from "./docs"
+import { eventData, eventDescription } from "./../../documentation/docs"
 import DocLayout from '../../components/DocLayout';
 
 const eventPage = () => {
 
   return (
     <DocLayout 
-      title={description.title} 
-      baseDescription={description.description} 
-      data={data} 
-      description={description} 
+      title={eventDescription.title} 
+      baseDescription={eventDescription.description} 
+      data={eventData} 
+      description={eventDescription} 
     />
 
   );

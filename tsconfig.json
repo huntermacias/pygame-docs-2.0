@@ -26,6 +26,6 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/**/*"
-,  ],
+, "components/navbar.jsx", "components/PygameModal.jsx",  ],
   "exclude": ["node_modules"]
 }

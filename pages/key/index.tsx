@@ -1,16 +1,16 @@
 'use client'
 
-import { data, description } from "./docs"
+import { keyData, keyDescription } from "./../../documentation/docs"
 import DocLayout from '../../components/DocLayout';
 
 const KeyPage = () => {
 
   return (
     <DocLayout 
-      title={description.title} 
-      baseDescription={description.description} 
-      data={data} 
-      description={description} 
+      title={keyDescription.title} 
+      baseDescription={keyDescription.description} 
+      data={keyData} 
+      description={keyDescription} 
     />
 
   );

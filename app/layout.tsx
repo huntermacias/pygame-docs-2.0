@@ -34,26 +34,30 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }) {
+
+
+function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <meta name="twitter:title" content={metadata.twitter.title} />
-      <meta name="twitter:description" content={metadata.twitter.description} />
-      <meta name="twitter:image" content={metadata.twitter.images[0]} />
-      <meta name="twitter:card" content={metadata.twitter.description} />
+        <title>Pygame Documentation 2.0</title>
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+        <meta name="twitter:card" content={metadata.twitter.description} />
       </head>
-      <body className='bg-gray-900 h-screen'>
-        <Navbar />  
-        
+      <body className="bg-gray-900 h-screen">
+        <nav>
+          <Navbar />
+        </nav>
         {children}
         <br />
-
         <div className="md:block hidden">
           <Footer />
         </div>
-        
       </body>
     </html>
-  )
+  );
 }
+
+export default RootLayout;

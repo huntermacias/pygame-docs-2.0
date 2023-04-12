@@ -1,16 +1,16 @@
 'use client'
 
-import { data, description } from "./docs"
+import { colorData, colorDescription } from "./../../documentation/docs"
 import DocLayout from '../../components/DocLayout';
 
 const ColorPage = () => {
 
   return (
     <DocLayout 
-      title={description.title} 
-      baseDescription={description.description} 
-      data={data} 
-      description={description} 
+      title={colorDescription.title} 
+      baseDescription={colorDescription.description} 
+      data={colorData} 
+      description={colorDescription} 
     />
 
   );

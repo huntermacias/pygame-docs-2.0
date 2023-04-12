@@ -1,16 +1,16 @@
 'use client'
 
-import { data, description } from "./docs"
+import { mixerData, mixerDescription } from "./../../documentation/docs"
 import DocLayout from '../../components/DocLayout';
 
 const MixerPage = () => {
 
   return (
     <DocLayout 
-      title={description.title} 
-      baseDescription={description.description} 
-      data={data} 
-      description={description} 
+      title={mixerDescription.title} 
+      baseDescription={mixerDescription.description} 
+      data={mixerData} 
+      description={mixerDescription} 
     />
 
   );
