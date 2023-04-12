@@ -89,7 +89,7 @@ const navigation = [
     options: [
     {
         name: 'Pygame.Color',
-        description: "Pygame.colors: It's a collection of ready-made colors that you can use when creating graphics in Pygame.",
+        description: "Pygame.Color: It's a collection of ready-made colors that you can use when creating graphics in Pygame.",
         href: '/color',
         icon: ColorIcon,
     },
@@ -149,8 +149,14 @@ const navigation = [
     },
     {
       name: 'Pygame.mouse',
-      description: 'Pygame.transform: Intermediate topic for using Pygame.transform.',
+      description: 'Pygame.mouse: Intermediate topic for using Pygame.transform.',
       href: '/mouse',
+      icon: MouseIcon,
+    },
+    {
+      name: 'Pygame.mixer',
+      description: 'Pygame.mixer: Intermediate topic for using Pygame.transform.',
+      href: '/mixer',
       icon: MouseIcon,
     },
   ],
@@ -159,9 +165,9 @@ const navigation = [
     name: 'Intermediate Topics',
     options: [
       {
-        name: 'Pygame.transfrom',
-        description: 'Start here to learn how to use Pygame.transform',
-        href: '/transform',
+        name: 'Pygame.sprite',
+        description: 'pygame module with basic game object classes',
+        href: '/sprite',
         icon: LightningBoltIcon,
       },
 	  {

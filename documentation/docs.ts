@@ -1414,7 +1414,98 @@ title: "pygame.time Module",
 description:
   "Creates a new Clock object that can be used to track an amount of time. The clock also provides several functions to help control a game's framerate. This method should be called once per frame. It will compute how many milliseconds have passed since the previous call.",
   };
+
+export type spriteInfo = {
+title: string;
+description: string;
+key: string;
+codesample: string;
+  };
+const spriteData: spriteInfo[] = [
+{
+  title: 'pygame.sprite.Sprite()',
+  key: '1',
+  codesample: `import pygame
+class Block(pygame.sprite.Sprite):
+
+  # Constructor. Pass in the color of the block,
+  # and its x and y position
+  def __init__(self, color, width, height):
+      # Call the parent class (Sprite) constructor
+      pygame.sprite.Sprite.__init__(self)
+
+      # Create an image of the block, and fill it with a color.
+      # This could also be an image loaded from the disk.
+      self.image = pygame.Surface([width, height])
+      self.image.fill(color)
+
+      # Fetch the rectangle object that has the dimensions of the image
+      # Update the position of this object by setting the values of rect.x and rect.y
+      self.rect = self.image.get_rect()
+       `,
+  description: 'Returns - Sprite',
   
+  },
+  {
+  title: 'pygame.sprite.Group()',
+  key: '2',
+  codesample: `# Importing pygame module
+import pygame
+
+# Initializing pygame
+pygame.init()
+
+# Create a sprite class that inherits from pygame.sprite.Sprite
+class MySprite(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.Surface((50, 50))
+        self.image.fill((255, 0, 0))
+        self.rect = self.image.get_rect()
+
+# Create a sprite group using pygame.sprite.Group()
+my_group = pygame.sprite.Group()
+
+# Create some sprite objects
+sprite1 = MySprite()
+sprite2 = MySprite()
+
+# Add sprite objects to the sprite group using add() method
+my_group.add(sprite1)
+my_group.add(sprite2)
+
+# Main game loop
+while True:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    # Update all sprites in the group
+    my_group.update()
+
+    # Draw all sprites in the group onto the screen
+    screen.fill((255, 255, 255))
+    my_group.draw(screen)
+
+    # Update the display
+    pygame.display.flip()
+
+    # Pause the game for a short time
+    pygame.time.wait(10)
+  `,
+  description: "pygame.sprite.Group() is used to hold and manage multiple Sprite objects. The sprite class MySprite is defined with an __init__() method that initializes the sprite's image and rect attributes. Two instances of MySprite are created and added to the my_group sprite group using the add() method. In the main game loop, the sprite group is updated using the update() method and then drawn onto the screen using the draw() method. Finally, the display is updated using pygame.display.flip() and the game is paused for a short time using pygame.time.wait().",
+  },
+
+  ];
+
+const spriteDescription = {
+title: "pygame.sprite Module",
+description:
+  "Pygame.sprite is a module in the Pygame library that provides an efficient way to create and manipulate groups of sprites, which are 2D images or animations that can be displayed on a Pygame surface. The module offers features such as collision detection and grouping of related sprites for efficient updates and drawing. It is commonly used in 2D game development to manage and update large numbers of sprites in a game scene.",
+  };
+
     
 
   
@@ -1430,7 +1521,8 @@ export {
         mouseData, mouseDescription,
         RectData, RectDescription,
         surfaceData, surfaceDescription,
-        timeData, timeDescription
+        timeData, timeDescription,
+        spriteData, spriteDescription,
     };
 
  
