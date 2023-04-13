@@ -176,6 +176,18 @@ const navigation = [
         href: '/math',
         icon: LightningBoltIcon,
       },
+      {
+        name: 'Pygame.transform',
+        description: 'Start here to learn how to use Pygame.transform',
+        href: '/transform',
+        icon: LightningBoltIcon,
+      },
+      {
+        name: 'Pygame.mask',
+        description: 'Start here to learn how to use Pygame.mask',
+        href: '/mask',
+        icon: LightningBoltIcon,
+      },
     ],
   },
   {
