@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # Pygame Documentation 2.0
 #### Welcome to the Project Name repository! This project is an open-source project that you can contribute to. This document will provide information on how to contribute and get started.
 
