@@ -4,6 +4,44 @@ import { useState } from "react";
 
 const PygameCards = () => {
   const [activeCard, setActiveCard] = useState(true);
+  const [activeCard2, setActiveCard2] = useState(true);
+  const [activeCard3, setActiveCard3] = useState(true);
+
+  const pygameList1 = [
+    {
+      label: "Pygame Basics Details",
+      link: "/pygame-basics",
+      key: '1'
+    },
+    {
+      label: "Pygame Advanced Details",
+      link: "/pygame-basics",
+      key: '2'
+    },
+    {
+      label: "View Demo",
+      link: "https://demo.com",
+      key: '3'
+    },
+  ];
+
+  const pygameList2 = [
+    {
+      label: "Pygame Basics2.0",
+      link: "/pygame-basics",
+      key: '1'
+    },
+    {
+      label: "Pygame  Advanced2.0",
+      link: "/pygame-advanced",
+      key: '2'
+    },
+    {
+      label: "View Demo 2",
+      link: "https://demo.com",
+      key: '3'
+    },
+  ];
 
   const cards = [
     {
@@ -12,11 +50,7 @@ const PygameCards = () => {
         "Get started on your journey of creating fun and exciting games with Pygame! In this beginner-friendly course, you'll learn the fundamentals of Pygame, from setting up your development environment to creating your first game. With easy-to-follow tutorials and hands-on exercises, you'll be able to bring your imagination to life and start creating games that you can be proud of. Join now and unlock the power of Pygame!",
       imageUrl: "https://cdn-icons-png.flaticon.com/512/2621/2621053.png",
       linkUrl: "/pygame-basics",
-      options: [
-        { label: "Pygame Basics Details", link: "/pygame-basics" },
-        { label: "View on GitHub", link: "https://github.com/username/repo" },
-        { label: "View Demo", link: "https://demo.com" },
-      ],
+      options: pygameList1,
     },
     {
       title: "Pygame Advanced",
@@ -24,20 +58,8 @@ const PygameCards = () => {
         "Discover the limitless possibilities of Pygame and explore advanced concepts and techniques to create games that will impress your friends and players alike. This course will challenge you to push your Pygame skills to their limits and create immersive gaming experiences that will leave a lasting impression. Take the next step in your Pygame journey by using objects and sprites to development your 2D games.",
       imageUrl: "https://cdn-icons-png.flaticon.com/512/2621/2621053.png",
       linkUrl: "/pygame-advanced",
-      options: [
-        {
-          label: "Pygame Advanced Details",
-          link: "/pygame-advanced",
-        },
-        {
-          label: "View on GitHub",
-          link: "https://github.com/username/repo",
-        },
-        {
-          label: "View Demo",
-          link: "https://demo.com",
-        },
-      ],
+      options: pygameList2,
+      
     },
     {
       title: "Full Game Examples",
@@ -45,28 +67,15 @@ const PygameCards = () => {
         "Unlock the full potential of Pygame and unleash your creativity to create immersive gaming experiences. This course will take you on a deep dive into advanced Pygame concepts and techniques, providing you with the skills and knowledge necessary to develop games that will leave a lasting impression. Whether you're a seasoned game developer or just starting out, this course will challenge your pygame knowledge.",
       imageUrl: "https://cdn-icons-png.flaticon.com/512/2621/2621053.png",
       linkUrl: "/pygame-examples-learn",
-      options: [
-        {
-          label: "Full Game Examples Details",
-          link: "/pygame-examples-learn",
-        },
-        {
-          label: "View on GitHub",
-          link: "https://github.com/username/repo",
-        },
-        {
-          label: "View Demo",
-          link: "https://demo.com",
-        },
-      ],
+      options: pygameList2,
     },
   ];
 
   const handleCardClick = (index) => {
-    if (activeCard === index) {
-      setActiveCard(false);
+    if (index == 0) {
+      setActiveCard(true);
     } else {
-      setActiveCard(index);
+      setActiveCard(false);
     }
   };
 
@@ -103,16 +112,27 @@ const PygameCards = () => {
 
                   {activeCard && (
                     <ul className="relative mt-4 text-lg bg-gray-900 rounded-md shadow-lg py-2">
+                        <div >
+                          <li>
+                            <div key={index}>
                       {cards.map((card, index) => (
-                        <div  key={index}>
-                          <li className="px-4 py-2 rounded-md hover:bg-gray-800 hover:w-1/2 hover:ml-2 text-white">
-                            <a href={card.linkUrl}>{card.title}</a> 
-                          </li>
+                        <div key={index}>
+                          {index === 1 && (
+                            <div>
+                              {card.options.map((option, key) => (
+                                <div key={key} className="px-4 py-2 rounded-md hover:bg-gray-800 hover:w-1/2 hover:ml-2 text-white">
+                                  <a href={option.link}>{option.label}</a>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                         
 
                         </div>
-
-                      ))}
-                    
+                              ))}
+                            </div>
+                          </li>
+                        </div>
                     </ul>
                   )}
                 </div>
