@@ -1,4 +1,5 @@
 
+import Head from 'next/head';
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import './globals.css'
@@ -9,10 +10,10 @@ import './globals.css'
 function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>Pygame Documentation 2.0</title>
        
-      </head>
+      </Head>
       <body className="bg-gray-900 h-screen">
         <nav>
           <Navbar />
