@@ -64,18 +64,6 @@ const Navbar = () => {
               Learn
 
             </Link>
-            {/* <Link
-              href="/"
-              className="ml-8 whitespace-nowrap text-base font-medium text-gray-500 hover:text-white"
-            >
-              Log in
-            </Link>
-            <Link
-              href="/signup"
-              className="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-            >
-              Sign up
-            </Link> */}
           </div>
         </div>
       </div>

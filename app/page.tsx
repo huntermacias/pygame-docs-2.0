@@ -4,7 +4,7 @@ import Link from "next/link";
 import GettingStarted from "../components/GettingStarted";
 import PygameModal from "../components/PygameModal";
 import { gettingstart } from "../helpers/documentation-code";
-import { useState } from "react";
+import React, { useState } from 'react';
 import Autosuggest from "react-autosuggest";
 
 export default function Home() {
