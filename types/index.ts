@@ -19,6 +19,15 @@ export interface LearnBegInfo {
   key: string;
 }
 
+export interface LearnAdvInfo {
+  title: string;
+  description: string;
+  codesample: string | undefined;
+  key: string;
+}
+
+
+
 export type Description = {
   title: string;
   description: string;
