@@ -102,11 +102,11 @@ const PygameCards = () => {
                   </button>
 
                   {activeCard && (
-                    <ul className="relative mt-4 text-xl bg-gray-900 rounded-md shadow-lg py-2">
+                    <ul className="relative mt-4 text-lg bg-gray-900 rounded-md shadow-lg py-2">
                       {cards.map((card, index) => (
                         <div  key={index}>
-                          <li className="px-4 py-2 rounded-md hover:bg-gray-800 text-white">
-                            <a href={card.linkUrl}>{card.title}</a>
+                          <li className="px-4 py-2 rounded-md hover:bg-gray-800 hover:w-1/2 hover:ml-2 text-white">
+                            <a href={card.linkUrl}>{card.title}</a> 
                           </li>
 
                         </div>
