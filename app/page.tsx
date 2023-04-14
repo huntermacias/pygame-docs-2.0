@@ -9,6 +9,7 @@ import Autosuggest from "react-autosuggest";
 
 export default function Home() {
   const data = [
+    { name: "Pygame", url: "/pygame" },
     { name: "Color", url: "/color" },
     { name: "Draw", url: "/draw" },
     { name: "Events", url: "/events" },

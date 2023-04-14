@@ -85,8 +85,14 @@ const MouseIcon = () => (
 
 const navigation = [
   {
-    name: 'Beginner Docs',
+    name: 'Beginner docs',
     options: [
+      {
+        name: 'Pygame',
+        description: 'Pygame: Beginner topic for using Pygame',
+        href: '/pygame',
+        icon: MouseIcon,
+      },
     {
         name: 'Pygame.Color',
         description: "Pygame.Color: It's a collection of ready-made colors that you can use when creating graphics in Pygame.",
@@ -149,20 +155,20 @@ const navigation = [
     },
     {
       name: 'Pygame.mouse',
-      description: 'Pygame.mouse: Intermediate topic for using Pygame.transform.',
+      description: 'Pygame.mouse: Beginner topic for using Pygame.mouse.',
       href: '/mouse',
       icon: MouseIcon,
     },
     {
       name: 'Pygame.mixer',
-      description: 'Pygame.mixer: Intermediate topic for using Pygame.transform.',
+      description: 'Pygame.mixer: Beginner topic for using Pygame.time.',
       href: '/mixer',
       icon: MouseIcon,
     },
   ],
   },
   {
-    name: 'Intermediate Docs',
+    name: 'Intermediate docs',
     options: [
       {
         name: 'Pygame.sprite',
@@ -191,7 +197,7 @@ const navigation = [
     ],
   },
   {
-    name: 'Advanced Docs',
+    name: 'Advanced docs',
     options: [
       {
         name: 'Pygame.tests',
@@ -206,7 +212,7 @@ const navigation = [
     options: [
       {
         name: 'Player Object', 
-        href: '/Docs',
+        href: '/docs',
         icon: LightningBoltIcon,
         code: `import pygame
 
@@ -232,7 +238,7 @@ class Player(pygame.sprite.Sprite):
       },
       {
         name: 'Ball Object', 
-        href: '/Docs',
+        href: '/docs',
         icon: LightningBoltIcon,
         code: `import pygame
 
@@ -263,7 +269,7 @@ class Block(pygame.sprite.Sprite):
       },
       {
         name: 'Game Object', 
-        href: '/Docs',
+        href: '/docs',
         icon: LightningBoltIcon,
         code: `import pygame
 from player import Player

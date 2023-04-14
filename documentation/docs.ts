@@ -1816,6 +1816,61 @@ const maskDescription = {
     "Pygame.mask is a module in the Pygame library that provides a way to create and manipulate masks, which are binary images that define the transparency of an image. Masks are commonly used in collision detection and pixel-perfect collision checking in games. The module offers features such as creating a mask from a Surface object, setting and getting individual pixels, and performing various operations such as bitwise AND and OR on masks.",
 };
 
+export type LearningInfo = {
+  title: string;
+  description: string;
+  key: string;
+  codesample: string;
+};
+
+const pygameData: LearningInfo[] = [
+  {
+    title: "pygame.init()",
+    description:
+      "Initialize all imported pygame modules (required before any module level constants are created)",
+    key: "1",
+    codesample: `import pygame
+
+pygame.init()
+`,
+  },
+  {
+    title: "pygame.display.set_mode()",
+    description:
+      "Initialize a window or screen for display. Returns a new Surface object representing the visible part of the window",
+    key: "2",
+    codesample: `import pygame
+
+pygame.init()
+
+# Set up the display window
+display = pygame.display.set_mode((800, 600))
+`,
+  },
+  {
+    title: "pygame.draw.circle()",
+    description: "Draw a circle onto a Surface object",
+    key: "3",
+    codesample: `import pygame
+
+pygame.init()
+
+# Create a surface to draw on
+surface = pygame.Surface((200, 200))
+
+# Draw a circle on the surface
+pygame.draw.circle(surface, (255, 0, 0), (100, 100), 50)
+`,
+  },
+];
+
+const pygameDescription = {
+  title: "Pygame Module",
+  description:
+    "Pygame is a set of Python modules designed for writing video games. It includes modules for graphics, sound, input, and more.",
+};
+
+
     
 
   
@@ -1836,6 +1891,7 @@ export {
         transformData, transformDescription,
         mathData, mathDescription,
         maskData, maskDescription,
+        pygameData, pygameDescription,
     };
 
  

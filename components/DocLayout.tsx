@@ -1,7 +1,7 @@
 import React from "react";
 import GettingStarted from "./GettingStarted";
 import TextBox from "./TextBox";
-import { Info, Description, LayoutProps } from "../types";
+import { LayoutProps } from "../types";
 
 
 const DocLayout = ({
