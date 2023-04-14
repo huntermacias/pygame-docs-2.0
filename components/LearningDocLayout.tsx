@@ -1,6 +1,7 @@
 import React from "react";
 import { LearnBegInfo, Description, LearningLayoutProps } from "../types";
 import LearningDocStep from "./LearningDocStep";
+import Image from "next/image";
 
 const LearningDocLayout = ({
   title,
@@ -23,7 +24,9 @@ const LearningDocLayout = ({
             </div>
           </div>
           <div className="sm:w-1/2 px-4">
-            <img className="h-64 w-full object-cover mt-4 rounded-md" src="https://img.itch.zone/aW1nLzQ0MTE3NDMucG5n/315x250%23c/X9QEHt.png" />
+            <Image className="h-64 w-full object-cover mt-4 rounded-md" alt="pygame-img" src="https://img.itch.zone/aW1nLzQ0MTE3NDMucG5n/315x250%23c/X9QEHt.png"
+              width={300}
+              height={200} />
           </div>
         </div>
         <div className="mt-8">
