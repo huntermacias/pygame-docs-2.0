@@ -1,5 +1,5 @@
 import React from "react";
-import { LearnBegInfo, Description, LearningLayoutProps } from "../types";
+import { LearningLayoutProps } from "../types";
 import LearningDocStep from "./LearningDocStep";
 
 const LearningDocLayout = ({
