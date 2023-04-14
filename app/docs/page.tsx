@@ -38,7 +38,7 @@ const Topics = () => {
                         {category.options.map((option) => {
                           const Icon = option.icon;
                           return (
-                            <Link key={option.name} href={option.href}>
+                            <Link key={option.name} href={`docs/${option.href}`}>
                               <span
                                 className="flex flex-col rounded-lg shadow-sm transition duration-150 ease-in-out hover:shadow-lg"
                               >
