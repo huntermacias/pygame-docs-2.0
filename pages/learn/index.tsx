@@ -21,7 +21,7 @@ const PygameCards = () => {
     {
       title: "Pygame Advanced",
       description:
-        "Discover the limitless possibilities of Pygame and explore advanced concepts and techniques to create games that will impress your friends and players alike. This course will challenge you to push your Pygame skills to their limits and create immersive gaming experiences that will leave a lasting impression. Take the next step in your Pygame journey and become a master game developer.",
+        "Discover the limitless possibilities of Pygame and explore advanced concepts and techniques to create games that will impress your friends and players alike. This course will challenge you to push your Pygame skills to their limits and create immersive gaming experiences that will leave a lasting impression. Take the next step in your Pygame journey by using objects and sprites to development your 2D games. Become a pygame master today!",
       imageUrl: "https://cdn-icons-png.flaticon.com/512/2621/2621053.png",
       linkUrl: "/pygame-advanced",
       options: [
