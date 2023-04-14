@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import './globals.css';
 
 const RootLayout = dynamic(() => import('./../components/layout'), {
-  ssr: true,
+  ssr: false,
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
