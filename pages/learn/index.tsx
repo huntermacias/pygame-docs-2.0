@@ -21,7 +21,7 @@ const PygameCards = () => {
     {
       title: "Pygame Advanced",
       description:
-        "Discover the limitless possibilities of Pygame and explore advanced concepts and techniques to create games that will impress your friends and players alike. This course will challenge you to push your Pygame skills to their limits and create immersive gaming experiences that will leave a lasting impression. Take the next step in your Pygame journey by using objects and sprites to development your 2D games. Become a pygame master today!",
+        "Discover the limitless possibilities of Pygame and explore advanced concepts and techniques to create games that will impress your friends and players alike. This course will challenge you to push your Pygame skills to their limits and create immersive gaming experiences that will leave a lasting impression. Take the next step in your Pygame journey by using objects and sprites to development your 2D games.",
       imageUrl: "https://cdn-icons-png.flaticon.com/512/2621/2621053.png",
       linkUrl: "/pygame-advanced",
       options: [
@@ -73,7 +73,7 @@ const PygameCards = () => {
   return (
     <div className="py-10 font-mono">
       <div className="container mx-auto">
-        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="relative grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card, index) => (
             <div
               key={index}
