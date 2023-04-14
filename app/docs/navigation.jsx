@@ -85,7 +85,7 @@ const MouseIcon = () => (
 
 const navigation = [
   {
-    name: 'Beginner Topics',
+    name: 'Beginner Docs',
     options: [
     {
         name: 'Pygame.Color',
@@ -162,7 +162,7 @@ const navigation = [
   ],
   },
   {
-    name: 'Intermediate Topics',
+    name: 'Intermediate Docs',
     options: [
       {
         name: 'Pygame.sprite',
@@ -191,7 +191,7 @@ const navigation = [
     ],
   },
   {
-    name: 'Advanced Topics',
+    name: 'Advanced Docs',
     options: [
       {
         name: 'Pygame.tests',
@@ -206,7 +206,7 @@ const navigation = [
     options: [
       {
         name: 'Player Object', 
-        href: '/topics',
+        href: '/Docs',
         icon: LightningBoltIcon,
         code: `import pygame
 
@@ -232,7 +232,7 @@ class Player(pygame.sprite.Sprite):
       },
       {
         name: 'Ball Object', 
-        href: '/topics',
+        href: '/Docs',
         icon: LightningBoltIcon,
         code: `import pygame
 
@@ -263,7 +263,7 @@ class Block(pygame.sprite.Sprite):
       },
       {
         name: 'Game Object', 
-        href: '/topics',
+        href: '/Docs',
         icon: LightningBoltIcon,
         code: `import pygame
 from player import Player

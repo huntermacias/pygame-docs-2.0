@@ -782,14 +782,14 @@ key: "5",
 },
 {
   title: 'pygame.mouse.set_cursor()',
-  codesample: `customCursor = pygame.cursors.Cursor() # see Intermediate Topics: cursors
+  codesample: `customCursor = pygame.cursors.Cursor() # see Intermediate Docs: cursors
 pygame.mouse.set_cursor(CustomCursor())`,
   description: 'gets the mouses x and y position',
   key: "6",
 },
 {
   title: 'pygame.mouse.get_cursor()',
-  codesample: `cursorStatus = pygame.mouse.get_cursor() # see Intermediate Topics: cursors
+  codesample: `cursorStatus = pygame.mouse.get_cursor() # see Intermediate Docs: cursors
 print(f'Cusor Status: {cursorStatus}')`,
   description: 'gets the mouses x and y position',
   key: "7",

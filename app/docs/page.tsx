@@ -5,7 +5,7 @@ import navigation from './navigation';
 import Link from 'next/link';
 import GettingStarted from '../../components/GettingStarted';
 
-const Topics = () => {
+const Docs = () => {
   return (
     <div className="bg-gray-900 text-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
@@ -75,5 +75,5 @@ const Topics = () => {
   );
 };
 
-export default Topics;
+export default Docs;
 
