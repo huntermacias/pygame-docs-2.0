@@ -8,7 +8,7 @@
 #### To get started, you need to clone this repository to your local machine. You can do this by running the following command in your terminal:
 
 ```terminal
-git clone https://github.com/huntermacias/revamed-pygame-docs.git
+git clone https://github.com/huntermacias/pygame-docs-2.0.git
 ```
 
 #### Next, navigate to the project directory:
@@ -57,11 +57,7 @@ VALUES (
 5. Click on "Save" to create the table and insert the default data.
 6. You should now have a new table called pygame_steps with the default Pygame tutorial steps data.
 ##### Note: Make sure that you have the correct schema selected before running the SQL queries. Also, if you already have a table with thesame name as another in your Supabase database, running these queries will overwrite the existing data.
-<<<<<<< HEAD
 
-
-=======
->>>>>>> d242e5923dfa050a6b5aab68f51f2c44c9ed696d
 
 ## Issues
 
