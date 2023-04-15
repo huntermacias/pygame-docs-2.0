@@ -22,7 +22,6 @@ cd revamed-pygame-docs
 ```terminal
 npm install
 ```
-
 ## Contributing
 
 ##### We welcome contributions from anyone who is interested in improving this project. If you are new to open-source contributions, check out the GitHub documentation on contributing to open-source projects.
@@ -58,14 +57,17 @@ VALUES (
 5. Click on "Save" to create the table and insert the default data.
 6. You should now have a new table called pygame_steps with the default Pygame tutorial steps data.
 ##### Note: Make sure that you have the correct schema selected before running the SQL queries. Also, if you already have a table with thesame name as another in your Supabase database, running these queries will overwrite the existing data.
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d242e5923dfa050a6b5aab68f51f2c44c9ed696d
 
 ## Issues
 
 #### If you find an issue with the project or have a feature request, you can create a new issue on our GitHub issues page. When creating a new issue, please provide as much detail as possible about the issue or feature request.
 
-## Pull Requests
+## Contributing
 
 #### If you would like to contribute to the project, you can do so by creating a pull request. Here are the steps to create a pull request:
 

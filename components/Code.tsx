@@ -38,7 +38,7 @@ const Code = ({
   }, [code, show, animated]);
 
   // number of lines
-  const lines = text.split(/\r\n|\r|\n/).length;
+  const lines = text.split(" ").length;
 
   const theme = applicationTheme === "light" ? lightTheme : darkTheme;
 
