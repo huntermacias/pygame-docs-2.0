@@ -1,9 +1,28 @@
 export type Info = {
   title: string;
   description: string;
+  shortDesc: string;
   key: string;
   codesample: string;
 };
+
+export type CardOption = {
+  label: string;
+  link: string;
+  key: string;
+  }
+
+export type Card = {
+	title: string;
+	description: string;
+  shortDesc: string;
+	imageUrl: string;
+	linkUrl: string;
+	options: CardOption[];
+  }
+
+
+
 
 export type LearningInfo = {
   title: string;
@@ -43,6 +62,7 @@ export type LayoutProps = {
 export type LearningLayoutProps = {
   title: string;
   baseDescription: string;
+  shortDesc: string;
   data: LearningInfo[];
   description: Description;
 };
