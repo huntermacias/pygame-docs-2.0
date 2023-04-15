@@ -55,7 +55,7 @@ export default function LearningCard({ cards }: Props) {
                         <div key={index}>
                           <div
                             key={key}
-                            className="px-4 py-2 rounded-md xl:hover:w-3/4 hover:bg-[#2b2b2b] hover:ml-2 text-white font-extralight"
+                            className="px-4 py-2 rounded-md xl:hover:w-3/4 hover:bg-[#2b2b2b] text-sm md:text-lg hover:ml-2 text-white font-extralight"
                           >
                             <a href={option.link}>{key+1}. {option.label}</a>
                           </div>

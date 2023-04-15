@@ -4,7 +4,7 @@ const cards: Card[] = [
     {
       title: "Pygame Basics",
       description:
-        "Get started on your journey of creating fun and exciting games with Pygame! In this beginner-friendly course, you'll learn the fundamentals of Pygame, from setting up your development environment to creating your first game. With easy-to-follow tutorials and hands-on exercises, you'll be able to bring your imagination to life and start creating games that you can be proud of. Join now and unlock the power of Pygame!",
+        "Get started on your journey of creating fun and exciting games with Pygame! In this section, you'll learn the fundamentals of Pygame, from setting up your development environment to creating your first game. With easy-to-follow tutorials and hands-on exercises, you'll be able to bring your imagination to life and start creating games that you can be proud of. Join now and unlock the power of Pygame!",
       shortDesc:
         "Pygame Graphics: Pygame is primarily used for game development, so you need to learn how to create graphics using Pygame. This includes creating shapes, loading and displaying images, and working with colors.",
       imageUrl:
@@ -23,7 +23,7 @@ const cards: Card[] = [
     {
       title: "Pygame Intermediate",
       description:
-        "Take your Pygame skills to the next level! In this intermediate-level course, you'll learn advanced concepts and techniques for creating engaging and immersive games. From working with audio and animations to building complex games designed using an object-orientated programming approach, you'll be able to create games that are both fun and challenging. Join now and take your Pygame skills to the next level!",
+        "Take your Pygame skills to the next level! In this section, you'll learn advanced concepts and techniques for creating engaging and immersive games. From working with audio and animations to building complex games designed using an object-orientated programming approach, you'll be able to create games that are both fun and challenging. Join now and take your Pygame skills to the next level!",
       shortDesc:
         "Pygame Audio: Pygame provides several ways to incorporate audio into your games, including sound effects and background music.",
       imageUrl:
@@ -42,7 +42,7 @@ const cards: Card[] = [
     {
       title: "Pygame Advanced",
       description:
-        "Ready to take on the biggest and most challenging Pygame projects? This course will cover advanced topics to help you create more complex and feature-rich games. You'll learn how to optimize performance, add AI and physics to your games, and implement advanced features like multiplayer functionality. With these skills, you'll be able to take your Pygame games to the next level and create truly amazing experiences. Join now and become a Pygame master!",
+        "Ready to take on the biggest and most challenging Pygame projects? This section will cover advanced topics to help you create more complex and feature-rich games. You'll learn how to optimize performance, add AI and physics to your games, and implement advanced features like multiplayer functionality. With these skills, you'll be able to take your Pygame games to the next level Join now and become a Pygame master!",
       shortDesc:
         "Pygame Performance Optimization: Learn how to improve the performance of your Pygame games, including tips for optimizing graphics, sound, and input handling.",
       imageUrl:
