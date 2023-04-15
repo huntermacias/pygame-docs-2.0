@@ -27,6 +27,40 @@ npm install
 
 #### We welcome contributions from anyone who is interested in improving this project. If you are new to open-source contributions, check out the GitHub documentation on contributing to open-source projects.
 
+### Create Default Table - Supabase
+
+##### To add the default table for Pygame tutorial steps, follow these steps:
+
+1. Log in to your Supabase account.
+2. Create a new table by clicking on the "New Table" button.
+3. Set the table name and the schema to public.
+4. In the "SQL" tab, paste the following code:
+```sql
+-- Create a table
+CREATE TABLE <tableName> (
+    id SERIAL PRIMARY KEY,
+    title TEXT,
+    short_desc TEXT,
+    description TEXT,
+    key TEXT,
+    code_sample TEXT
+);
+-- Insert Row into table
+INSERT INTO <tableName> (title, short_desc, description, key, code_sample)
+VALUES (
+    'Title',
+    'About this Section',
+    'Description',
+    'Key',
+    'Code Sample'
+);
+```
+5. Click on "Save" to create the table and insert the default data.
+6. You should now have a new table called pygame_steps with the default Pygame tutorial steps data.
+##### Note: Make sure that you have the correct schema selected before running the SQL queries. Also, if you already have a table with thesame name as another in your Supabase database, running these queries will overwrite the existing data.
+
+
+
 ## Issues
 
 #### If you find an issue with the project or have a feature request, you can create a new issue on our GitHub issues page. When creating a new issue, please provide as much detail as possible about the issue or feature request.
