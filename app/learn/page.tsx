@@ -1,7 +1,8 @@
+'use client'
 import { useState, useEffect } from "react";
 import LearningCard from "../../components/LearningCard";
-import { supabase } from './../../lib/supabaseClient';
-import { Card, SupabaseCard } from "./../../types";
+import { supabase } from '../../lib/supabaseClient';
+import { Card, SupabaseCard } from "../../types";
 
 const mapSupabaseCardToCard = (supabaseCard: SupabaseCard): Card => {
   return {

@@ -7,7 +7,7 @@ interface Props {
 }
 
 const LearningCard: React.FC<Props> = ({ card }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -29,7 +29,7 @@ const LearningCard: React.FC<Props> = ({ card }) => {
         <p className="text-gray-300 mb-4 px-2">{card.description}</p>
         <div className="relative z-index">
           <button 
-            onClick={() => {!isOpen}}
+            onClick={toggleDropdown}
             className="bottom w-1/2 bg-blue-800 hover:bg-[#2b2b2b] text-white font-normal py-2 px-4 rounded-lg transition-colors duration-200 hover:font-bold">
             Get Started
           </button>
