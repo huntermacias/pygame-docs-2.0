@@ -10,36 +10,32 @@ export type CardOption = {
   label: string;
   link: string;
   key: string;
-  }
+};
 
-  export type Option = {
-    label: string;
-    link: string;
-  }
-
+export type Option = {
+  label: string;
+  link: string;
+};
 
 export type Card = {
-    key: number;
-    title: string;
-    description: string;
-    shortDesc: string;
-    imageUrl: string;
-    linkUrl: string;
-    options: Option[];
-  }
+  key: number;
+  title: string;
+  description: string;
+  shortDesc: string;
+  imageUrl: string;
+  linkUrl: string;
+  options: Option[];
+};
 
 export type SupabaseCard = {
-    key: number;
-    title: string;
-    description: string;
-    short_desc: string;
-    image_url: string;
-    link_url: string;
-    options: { label: string; link: string }[];
-  }
-  
-
-
+  key: number;
+  title: string;
+  description: string;
+  short_desc: string;
+  image_url: string;
+  link_url: string;
+  options: { label: string; link: string }[];
+};
 
 export type LearningInfo = {
   title: string;
@@ -63,9 +59,7 @@ export interface SupaIntroSteps {
   shortDesc: string;
   codesample: string | undefined;
   key: string;
-
 }
-
 
 export interface LearnBegInfo {
   title: string;
@@ -82,8 +76,6 @@ export interface LearnAdvInfo {
   codesample: string | undefined;
   key: string;
 }
-
-
 
 export type Description = {
   title: string;
