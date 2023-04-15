@@ -16,7 +16,7 @@ const PygameADVPage = () => {
     <LearningDocLayout
       title={pygameAdvIntroduction.title}
       baseDescription={pygameAdvIntroduction.description}
-      shortDesc="short des"
+      shortDesc={pygameAdvSteps.slice(0,1)[0].shortDesc}
       data={formattedSteps}
       description={pygameAdvIntroduction}
     />
