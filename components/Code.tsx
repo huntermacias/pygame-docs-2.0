@@ -1,5 +1,3 @@
-"use client";
-
 import { useTheme } from "next-themes";
 import Highlight, { defaultProps, type Language } from "prism-react-renderer";
 import darkTheme from "prism-react-renderer/themes/nightOwl";
@@ -37,8 +35,8 @@ const Code = ({
     }
   }, [code, show, animated]);
 
-  // number of lines
-  const lines = text.split(/\r\n|\r|\n/).length;
+  // array of lines
+  const lines = text.split(/\r\n|\r|\n/);
 
   const theme = applicationTheme === "light" ? lightTheme : darkTheme;
 
@@ -51,20 +49,19 @@ const Code = ({
             "transition-all w-full bg-transparent duration-100 py-0 no-scrollbar text-xs lg:text-md mt-4"
           }
           style={{
-            maxHeight: show ? lines * 28 : 0,
+            maxHeight: show ? Number(lines) * 28 : 0,
             opacity: show ? 1 : 0,
           }}
         >
           {tokens.map((line, i) => {
-            // eslint-disable-next-line no-unused-vars
             const { key, ...rest } = getLineProps({ line, key: i });
+            const lineTokens = line.map((token, index) => {
+              const { key: tokenKey, ...props } = getTokenProps({ token, key: index });
+              return <span key={tokenKey} {...props} />;
+            });
             return (
-              <div key={`line-${i}`} style={{ position: "relative" }} {...rest}>
-                {line.map((token, index) => {
-                  // eslint-disable-next-line no-unused-vars
-                  const { key, ...props } = getTokenProps({ token, i });
-                  return <span key={index} {...props} />;
-                })}
+              <div key={key} style={{ position: "relative" }} {...rest}>
+                {lineTokens}
               </div>
             );
           })}
@@ -72,6 +69,8 @@ const Code = ({
       )}
     </Highlight>
   );
+  
 };
+
 
 export default Code;

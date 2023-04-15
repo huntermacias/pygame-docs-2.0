@@ -2,7 +2,7 @@ import LearningCard from "../../components/LearningCard";
 import card from "../../documentation/card_data"
 
 
-const PygameCards = () => {
+const LearnPage = () => {
  
   return (
     <div className="py-10 font-mono">
@@ -19,4 +19,4 @@ const PygameCards = () => {
   );
 };
 
-export default PygameCards;
+export default LearnPage;
