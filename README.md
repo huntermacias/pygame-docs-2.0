@@ -25,7 +25,7 @@ npm install
 
 ## Contributing
 
-#### We welcome contributions from anyone who is interested in improving this project. If you are new to open-source contributions, check out the GitHub documentation on contributing to open-source projects.
+##### We welcome contributions from anyone who is interested in improving this project. If you are new to open-source contributions, check out the GitHub documentation on contributing to open-source projects.
 
 ### Create Default Table - Supabase
 
