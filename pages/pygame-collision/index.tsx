@@ -1,26 +1,47 @@
 import React from "react";
 import LearningDocLayout from "../../components/LearningDocLayout";
-import { LearnBegInfo } from "../../types";
-import { pygameAdvIntroduction, pygameRectSteps } from "../../documentation/learning_docs";
+import { SupaIntro } from "../../types";
+import { supabase } from './../../lib/supabaseClient';
 
-const PygamePage = () => {
-  const formattedSteps: LearnBegInfo[] = pygameRectSteps.map((step, index) => ({
-    key: index.toString(),
-    title: step.title,
-    description: step.description,
-    shortDesc: step.shortDesc,
-    codesample: step.codesample ?? "",
-  }));
+const LearnRectPage = ({ pygame_rect_steps, pygame_rect_setup } ) => {
+  const formattedSteps: SupaIntro[] = pygame_rect_steps
+    ? pygame_rect_steps.map((step, index) => ({
+        key: index.toString(),
+        title: step.title,
+        description: step.description,
+        short_desc: step.short_desc,
+        codesample: step.code_sample ?? "",
+      }))
+    : [];
 
   return (
     <LearningDocLayout
-      title={pygameAdvIntroduction.title}
-      baseDescription={pygameAdvIntroduction.description}
-      shortDesc={pygameRectSteps.slice(0,1)[0].shortDesc}
+      title={pygame_rect_setup?.title}
+      baseDescription={pygame_rect_setup?.description}
+      shortDesc={pygame_rect_setup?.short_desc}
       data={formattedSteps}
-      description={pygameAdvIntroduction}
+      description={pygame_rect_setup?.description?.replace(/\\n/g, '\n')}
+      
     />
   );
 };
 
-export default PygamePage;
+export async function getServerSideProps() {
+    const { data: pygame_rect_setup } = await supabase
+    .from('pygame_rect_setup')
+    .select()
+    .single();
+
+  const { data: pygame_rect_steps } = await supabase
+    .from('pygame_rect_steps')
+    .select();
+
+  return {
+    props: {
+      pygame_rect_steps,
+      pygame_rect_setup,
+    },
+  };
+}
+
+export default LearnRectPage;
