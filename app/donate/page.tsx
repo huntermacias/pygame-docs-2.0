@@ -3,47 +3,27 @@
 import { useState } from "react";
 import { CheckIcon } from "@heroicons/react/solid";
 import Image from "next/image";
+import { DONATION_OPTIONS } from "./options"
 
-const DONATION_OPTIONS = [
-  {
-    id: 1,
-    name: "Basic",
-    description: "Support the project with a basic donation.",
-    price: 10,
-	price_id: 'https://buy.stripe.com/14k6pi5qD3h6cjmaEI',
-  },
-  {
-    id: 2,
-    name: "Premium",
-    description: "Get some extra perks with a premium donation.",
-    price: 25,
-	price_id: 'https://buy.stripe.com/7sI292dX9aJy0AE8wB',
-  },
-  {
-    id: 3,
-    name: "VIP",
-    description: "Become a VIP supporter with a VIP donation.",
-    price: 50,
-	price_id: 'https://buy.stripe.com/dR6dRK7yLbNC5UYbIO',
-  },
-];
+
+const GOAL_AMOUNT = 500;
 
 const Donation = () => {
-  const [selectedOption, setSelectedOption] = useState( {
-    id: 1,
-    name: "Basic",
-    description: "Support the project with a basic donation.",
-    price: 10,
-	price_id: 'https://buy.stripe.com/dR6dRK7yLbNC5UYbIO'
-  });
+  const [selectedOption, setSelectedOption] = useState(DONATION_OPTIONS[0]);
+
+
+  const [totalDonated, setTotalDonated] = useState(0);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
 
-  const donate = (price_id) => {
-	window.open(price_id);
-  }
+  const handleDonateClick = (price_id) => {
+    setTotalDonated(totalDonated + selectedOption.price);
+    window.open(price_id);
+  };
+
+  const progress = totalDonated / GOAL_AMOUNT;
 
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-6 md:max-w-3xl mx-auto mt-28 font-mono">
@@ -74,8 +54,20 @@ const Donation = () => {
           </div>
         ))}
       </div>
-
-
+      <div className="mt-6">
+        <div className="flex justify-between items-center mb-2">
+          <h4 className="text-lg font-medium text-gray-900">Goal Amount</h4>
+          <p className="text-lg font-medium text-gray-900">${GOAL_AMOUNT}</p>
+        </div>
+        <div className="w-full bg-gray-300 h-2 rounded-lg overflow-hidden">
+          <div className="bg-indigo-600 h-2 rounded-lg" style={{width: `${progress*100}%`}}></div>
+        </div>
+        <div className="flex justify-between items-center mt-2">
+          <p className="text-gray-600">{`$${totalDonated} raised`}</p>
+          <p className="text-gray-600">{`${Math.round(progress*100)}%`}</p>
+        </div>
+      </div>
+  
       {selectedOption && (
         <div className="mt-6 border-t border-gray-500 rounded-lg p-4 bg-gray-300 pt-4 font-mono">
           <h4 className="text-lg font-medium text-gray-900">Selected Option</h4>
@@ -98,7 +90,7 @@ const Donation = () => {
           </div>
           <div className="mt-4">
             <button 
-			        onClick={() => donate(selectedOption.price_id)}
+              onClick={() => handleDonateClick(selectedOption.price_id)}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg"
             >
               Donate Now
@@ -108,6 +100,7 @@ const Donation = () => {
       )}
     </div>
   );
+  
 };
 
 export default Donation;

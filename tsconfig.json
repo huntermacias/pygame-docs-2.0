@@ -26,6 +26,6 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/**/*"
-, "components/navbar.jsx", "components/PygameModal.jsx", "components/LearningDocStep.jsx", "components/LearningDocLayout.tsx",  ],
+, "components/navbar.jsx", "components/PygameModal.jsx", "components/LearningDocStep.jsx", "components/LearningDocLayout.tsx", "app/donate",  ],
   "exclude": ["node_modules"]
 }
