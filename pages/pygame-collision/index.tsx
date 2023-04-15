@@ -26,7 +26,9 @@ const LearnRectPage = ({ pygame_rect_steps, pygame_rect_setup } ) => {
   );
 };
 
+// get data from supabase
 export async function getServerSideProps() {
+    // data = supabase table name
     const { data: pygame_rect_setup } = await supabase
     .from('pygame_rect_setup')
     .select()
