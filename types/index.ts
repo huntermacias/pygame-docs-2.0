@@ -27,6 +27,7 @@ export type Card = {
 export type LearningInfo = {
   title: string;
   description: string;
+  shortDesc: string;
   key: string;
   codesample: string | undefined;
 };
@@ -34,6 +35,7 @@ export type LearningInfo = {
 export interface LearnBegInfo {
   title: string;
   description: string;
+  shortDesc: string;
   codesample: string | undefined;
   key: string;
 }
@@ -41,6 +43,7 @@ export interface LearnBegInfo {
 export interface LearnAdvInfo {
   title: string;
   description: string;
+  shortDesc: string;
   codesample: string | undefined;
   key: string;
 }
