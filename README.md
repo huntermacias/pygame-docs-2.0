@@ -75,6 +75,7 @@ VALUES (
 2. Clone the forked repository to your local machine
 3. Create a new branch for your changes
 
+
 ```terminal
 git checkout -b my-new-feature
 ```
