@@ -39,6 +39,25 @@ const cards: Card[] = [
         { label: "Pygame GUIs", link: "/pygame-guis", key: "7" },
       ],
     },
+    {
+      title: "Pygame Advanced",
+      description:
+        "Ready to take on the biggest and most challenging Pygame projects? This course will cover advanced topics to help you create more complex and feature-rich games. You'll learn how to optimize performance, add AI and physics to your games, and implement advanced features like multiplayer functionality. With these skills, you'll be able to take your Pygame games to the next level and create truly amazing experiences. Join now and become a Pygame master!",
+      shortDesc:
+        "Pygame Performance Optimization: Learn how to improve the performance of your Pygame games, including tips for optimizing graphics, sound, and input handling.",
+      imageUrl:
+        "https://cdn-icons-png.flaticon.com/512/2621/2621053.png",
+      linkUrl: "/pygame-advanced",
+      options: [
+        { label: "Pygame AI", link: "/pygame-ai", key: "1" },
+        { label: "Pygame Physics", link: "/pygame-physics", key: "2" },
+        { label: "Multiplayer Games", link: "/pygame-multiplayer", key: "3" },
+        { label: "Pygame Performance Optimization", link: "/pygame-performance", key: "4" },
+        { label: "Pygame Input Handling", link: "/pygame-input-handling", key: "5" },
+        { label: "Pygame Shaders", link: "/pygame-shaders", key: "6" },
+        { label: "Pygame 3D Graphics", link: "/pygame-3d", key: "7" },
+      ],
+    },
   ];
 
 

@@ -22,7 +22,7 @@ export default function LearningCard({ cards }: Props) {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="overflow-hidden shadow-lg rounded-lg bg-[#121212]"
+          className="overflow-hidden rounded-lg"
         >
           <Image
             className="pl-6 pt-3"
@@ -41,13 +41,14 @@ export default function LearningCard({ cards }: Props) {
             <div className="relative">
               <button
                 onClick={() => handleCardClick(index)}
-                className="bottom w-1/2 bg-blue-600 hover:bg-[#2b2b2b] shadow-lg shadow-bg-[#0a0a0a] text-white font-normal py-2 px-4 rounded-lg transition-colors duration-200 hover:font-bold"
+                className="bottom w-1/2 bg-blue-600 hover:bg-[#2b2b2b] text-white font-normal py-2 px-4 rounded-lg transition-colors duration-200 hover:font-bold"
               >
                 Get Started
               </button>
+              <div>
 
-              <ul className="relative mt-4 text-md md:text-xl bg-[#0a0a0a] rounded-md shadow-lg py-2">
-                <div>
+              <ul className="relative mt-4 p-2text-md md:text-xl bg-[#0a0a0a] rounded-md py-2">
+                <div className="text-stone-800 outline p-2">
                   {card.options.map((option, key) => (
                     <div key={key}>
                       <li>
@@ -56,7 +57,7 @@ export default function LearningCard({ cards }: Props) {
                             key={key}
                             className="px-4 py-2 rounded-md xl:hover:w-3/4 hover:bg-[#2b2b2b] hover:ml-2 text-white font-extralight"
                           >
-                            <a href={option.link}>{option.label}</a>
+                            <a href={option.link}>{key+1}. {option.label}</a>
                           </div>
                         </div>
                       </li>
@@ -64,6 +65,7 @@ export default function LearningCard({ cards }: Props) {
                   ))}
                 </div>
               </ul>
+              </div>
             </div>
           </div>
         </div>
