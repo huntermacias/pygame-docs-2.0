@@ -1,4 +1,4 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import './globals.css'
@@ -40,13 +40,13 @@ export const metadata = {
 function RootLayout({ children }) {
   return (
     <html lang="en">
-       <Head>
+       <head>
         <title>Pygame Documentation 2.0</title>
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.images[0]} />
         <meta name="twitter:card" content={metadata.twitter.description} />
-      </Head>
+      </head>
       <body className="bg-gray-900 h-screen">
         <nav>
           <Navbar />

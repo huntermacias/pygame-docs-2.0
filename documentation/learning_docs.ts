@@ -59,7 +59,6 @@ const pygameSteps: LearnBegInfo[] = [
 
 const pygameIntroduction = {
   title: "Introduction to Pygame",
-  shortDesc: "string",
   description:
     "Pygame is a set of Python modules used for game development. It provides functionality for handling user input, drawing graphics, playing sounds, and much more.",
   shortdesc: "Pygame Graphics: Pygame is primarily used for game development, so you need to learn how to create graphics using Pygame. This includes creating shapes, loading and displaying images, and working with colors."
