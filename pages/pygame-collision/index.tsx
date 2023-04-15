@@ -1,10 +1,10 @@
 import React from "react";
 import LearningDocLayout from "../../components/LearningDocLayout";
 import { LearnBegInfo } from "../../types";
-import { pygameAdvSteps, pygameAdvIntroduction } from "../../documentation/learning_docs";
+import { pygameAdvIntroduction, pygameRectSteps } from "../../documentation/learning_docs";
 
-const PygameADVPage = () => {
-  const formattedSteps: LearnBegInfo[] = pygameAdvSteps.map((step, index) => ({
+const PygamePage = () => {
+  const formattedSteps: LearnBegInfo[] = pygameRectSteps.map((step, index) => ({
     key: index.toString(),
     title: step.title,
     description: step.description,
@@ -16,11 +16,11 @@ const PygameADVPage = () => {
     <LearningDocLayout
       title={pygameAdvIntroduction.title}
       baseDescription={pygameAdvIntroduction.description}
-      shortDesc={pygameAdvSteps.slice(0,1)[0].shortDesc}
+      shortDesc={pygameRectSteps.slice(0,1)[0].shortDesc}
       data={formattedSteps}
       description={pygameAdvIntroduction}
     />
   );
 };
 
-export default PygameADVPage;
+export default PygamePage;

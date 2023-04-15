@@ -32,6 +32,16 @@ export type LearningInfo = {
   codesample: string | undefined;
 };
 
+export interface SupaIntro {
+  title: string;
+  description: string;
+  shortDesc: string;
+  codesample: string | undefined;
+  key: string;
+
+}
+
+
 export interface LearnBegInfo {
   title: string;
   description: string;
