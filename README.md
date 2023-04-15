@@ -23,15 +23,11 @@ cd revamed-pygame-docs
 npm install
 ```
 
-## Contributing
-
-#### We welcome contributions from anyone who is interested in improving this project. If you are new to open-source contributions, check out the GitHub documentation on contributing to open-source projects.
-
 ## Issues
 
 #### If you find an issue with the project or have a feature request, you can create a new issue on our GitHub issues page. When creating a new issue, please provide as much detail as possible about the issue or feature request.
 
-## Pull Requests
+## Contributing
 
 #### If you would like to contribute to the project, you can do so by creating a pull request. Here are the steps to create a pull request:
 
