@@ -22,8 +22,6 @@ export type Card = {
   }
 
 
-
-
 export type LearningInfo = {
   title: string;
   description: string;
@@ -33,6 +31,14 @@ export type LearningInfo = {
 };
 
 export interface SupaIntro {
+  title: string;
+  description: string;
+  shortDesc: string;
+  codesample: string | undefined;
+  key: string;
+}
+
+export interface SupaIntroSteps {
   title: string;
   description: string;
   shortDesc: string;
