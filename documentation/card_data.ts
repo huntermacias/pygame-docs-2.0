@@ -12,7 +12,7 @@ const cards: Card[] = [
       linkUrl: "/pygame-basics",
       options: [
         { label: "Basics of Pygame", link: "/pygame-basics", key: "1" },
-        { label: "Rects: Collision", link: "/pygame-collision", key: "2" },
+        { label: "Rects: Collision", link: "/pygame-classes", key: "2" },
         { label: "Sprites: Collision", link: "/pygame-sprites", key: "3" },
         { label: "Pygame Events", link: "/pygame-events", key: "4" },
         { label: "Pygame Clock", link: "/pygame-clock", key: "5" },
