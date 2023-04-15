@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { Card } from "./../types";
 
 interface Props {
@@ -7,15 +7,6 @@ interface Props {
 }
 
 export default function LearningCard({ cards }: Props) {
-  const [activeCard, setActiveCard] = useState(true);
-
-  const handleCardClick = (index) => {
-    if (index == 0) {
-      setActiveCard(true);
-    } else {
-      setActiveCard(false);
-    }
-  };
 
   return (
     <div>
@@ -35,13 +26,12 @@ export default function LearningCard({ cards }: Props) {
             <h2 className="font-mono font-extralight underline underline-offset-4 text-xl md:text-3xl mb-2 text-white">
               {card.title}
             </h2>
-            <p className="text-gray-300 mb-4 space-y-2">
+            <p className="text-gray-300 mb-4 px-2">
               {card.description}
             </p>
             <div className="relative">
               <button
-                onClick={() => handleCardClick(index)}
-                className="bottom w-1/2 bg-blue-600 hover:bg-[#2b2b2b] text-white font-normal py-2 px-4 rounded-lg transition-colors duration-200 hover:font-bold"
+                className="bottom w-1/2 bg-blue-800 hover:bg-[#2b2b2b] text-white font-normal py-2 px-4 rounded-lg transition-colors duration-200 hover:font-bold"
               >
                 Get Started
               </button>
