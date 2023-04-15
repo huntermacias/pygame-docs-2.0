@@ -8,6 +8,7 @@ const PygamePage = () => {
     key: index.toString(),
     title: step.title,
     description: step.description,
+    shortDesc: step.shortDesc,
     codesample: step.codesample ?? "",
   }));
 
@@ -15,7 +16,7 @@ const PygamePage = () => {
     <LearningDocLayout
       title={pygameIntroduction.title}
       baseDescription={pygameIntroduction.description}
-      shortDesc={pygameIntroduction.shortdesc}
+      shortDesc="short des"
       data={formattedSteps}
       description={pygameIntroduction}
     />

@@ -1,6 +1,7 @@
 export type LearnBegInfo = {
   title: string;
   description: string;
+  shortDesc: string;
   key: string;
   codesample?: string;
 };
@@ -8,6 +9,7 @@ export type LearnBegInfo = {
 const pygameSteps: LearnBegInfo[] = [
   {
     title: "Install Pygame",
+    shortDesc: "string",
     description:
       "First, you need to install Pygame. You can do this using pip, which is a package manager for Python. Open your terminal and run the following command:",
     key: "1",
@@ -15,6 +17,7 @@ const pygameSteps: LearnBegInfo[] = [
   },
   {
     title: "Import Pygame",
+    shortDesc: "string",
     description:
       "Once you have installed Pygame, you need to import it in your Python file:",
     key: "2",
@@ -22,6 +25,7 @@ const pygameSteps: LearnBegInfo[] = [
   },
   {
     title: "Initialize Pygame",
+    shortDesc: "string",
     description:
       "Before you can use Pygame, you need to initialize it. This is done using the `pygame.init()` method:",
     key: "3",
@@ -29,6 +33,7 @@ const pygameSteps: LearnBegInfo[] = [
   },
   {
     title: "Create a Window",
+    shortDesc: "string",
     description:
       "Now that Pygame is initialized, you can create a window to display your game:",
     key: "4",
@@ -36,6 +41,7 @@ const pygameSteps: LearnBegInfo[] = [
   },
   {
     title: "The Main Game Loop",
+    shortDesc: "string",
     description:
       "Finally, you need to create a main game loop. This loop will run continuously and handle user input, update the game state, and draw the game to the screen:",
     key: "5",
@@ -43,6 +49,7 @@ const pygameSteps: LearnBegInfo[] = [
   },
   {
     title: "Load and Display an Image",
+    shortDesc: "string",
     description:
       "You can load an image and display it on the screen using the `pygame.image.load()` and `blit()` methods:",
     key: "6",
@@ -52,6 +59,7 @@ const pygameSteps: LearnBegInfo[] = [
 
 const pygameIntroduction = {
   title: "Introduction to Pygame",
+  shortDesc: "string",
   description:
     "Pygame is a set of Python modules used for game development. It provides functionality for handling user input, drawing graphics, playing sounds, and much more.",
   shortdesc: "Pygame Graphics: Pygame is primarily used for game development, so you need to learn how to create graphics using Pygame. This includes creating shapes, loading and displaying images, and working with colors."
@@ -60,6 +68,7 @@ const pygameIntroduction = {
 export type LearnAdvInfo = {
   title: string;
   description: string;
+  shortDesc: string;
   key: string;
   codesample?: string;
 };
@@ -67,6 +76,7 @@ export type LearnAdvInfo = {
 const pygameAdvSteps: LearnAdvInfo[] = [
   {
     title: "Create a Window",
+    shortDesc: "string",
     description:
       "Now that Pygame is initialized, you can create a window to display your game:",
     key: "1",
@@ -75,6 +85,7 @@ const pygameAdvSteps: LearnAdvInfo[] = [
   },
   {
     title: "Create a Player Class",
+    shortDesc: "string",
     description:
       "In Pygame, you can create custom classes to represent different objects in your game. Let's create a Player class to represent the player character:",
     key: "2",
