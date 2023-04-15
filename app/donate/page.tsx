@@ -26,7 +26,7 @@ const Donation = () => {
   const progress = totalDonated / GOAL_AMOUNT;
 
   return (
-    <div className="bg-gray-200 rounded-lg shadow-lg p-6 md:max-w-3xl mx-auto mt-28 font-mono">
+    <div className="bg-gray-200 rounded-lg shadow-lg p-6 md:max-w-3xl mx-auto mt-14 font-mono">
       <div className="text-center">
         <h3 className="text-lg leading-6 font-medium text-gray-900 mb-2">
           Support the Project
