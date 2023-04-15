@@ -31,7 +31,7 @@ const cards: Card[] = [
       linkUrl: "/pygame-intermediate",
       options: [
         { label: "Sounds & Music", link: "/pygame-sound", key: "1" },
-        { label: "Classes & Objects", link: "/pygame-objects", key: "2" },
+        { label: "Classes & Objects", link: "/pygame-classes", key: "2" },
         { label: "Animations", link: "/pygame-animations", key: "3" },
         { label: "Multi-Screen Setup", link: "/pygame-multiscreen", key: "4" },
         { label: "Pygame Networking", link: "/pygame-networking", key: "5" },
