@@ -18,6 +18,13 @@ export type Option = {
   shortdescription: string;
 };
 
+export interface ModuleProps {
+  additionalInfo: {
+    info: string;
+    features: string[];
+  };
+}
+
 export type Card = {
   key: number;
   title: string;

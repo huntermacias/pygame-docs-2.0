@@ -1,6 +1,7 @@
 import React from "react";
 import { supabase } from './../../lib/supabaseClient';
 import DocLayout from "../../components/DocLayout";
+import ModuleInfo from "../../components/ModuleInfo";
 
 const ColorPage = ({ pygame_colorinfo }) => {
   const formattedSteps = pygame_colorinfo
@@ -18,14 +19,31 @@ const ColorPage = ({ pygame_colorinfo }) => {
       description:
         "Welcome to the Pygame color module! pygame.Color is a module that provides various color-related functions and methods for working with colors in Pygame.",
       };
+      const additionalInfo = {
+        info:
+          "The pygame.color module provides a range of pre-defined colors and allows for creating new colors using RGB or HSL values. It also supports converting between different color formats, such as RGB, HSL, HSV, and CMY.",
+        features: [
+          "The module includes over 200 pre-defined colors.",
+          "Colors can be created using RGB or HSL values.",
+          "Colors can be converted between RGB, HSL, HSV, and CMY formats.",
+          "The module provides methods for manipulating colors, such as adjusting brightness, saturation, and hue.",
+        ],
+      };
 
   return (
-    <DocLayout
-      title={colorDescription.title}
-      baseDescription={pygame_colorinfo?.description}
-      data={formattedSteps}
-      description={colorDescription}
-    />
+    <div>
+      <DocLayout
+        title={colorDescription.title}
+        baseDescription={pygame_colorinfo?.description}
+        data={formattedSteps}
+        description={colorDescription}
+      />
+      <div className="mx-auto max-w-3xl p-6">
+       <ModuleInfo additionalInfo={additionalInfo} />
+
+      </div>
+
+    </div>
   );
 };
 

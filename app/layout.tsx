@@ -1,4 +1,6 @@
 // import Head from 'next/head';
+'use client'
+import HomeNav from '../components/HomeNav';
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import './globals.css'
@@ -51,6 +53,7 @@ function RootLayout({ children }) {
         <nav>
           <Navbar />
         </nav>
+        <HomeNav />
         {children}
         <br />
         <div className="md:block hidden">

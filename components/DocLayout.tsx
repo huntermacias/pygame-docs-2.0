@@ -2,8 +2,8 @@ import React from "react";
 import ShowCode from "./ShowCode";
 import TextBox from "./TextBox";
 import { LayoutProps } from "../types";
-import { FaCode } from 'react-icons/fa';
-
+import { FaCode } from "react-icons/fa";
+import ModuleInfo from "./ModuleInfo";
 
 const DocLayout = ({
   title,
@@ -11,47 +11,35 @@ const DocLayout = ({
   data,
   description,
 }: LayoutProps) => {
+
   return (
-    <div className="mx-auto max-w-2xl p-6 mb-10">
+    <div className="mx-auto max-w-3xl p-6">
       <div className="text-center">
-        <h2 className="text-3xl font-extrabold text-amber-300">{title}</h2>
-        <p className="mt-4 text-lg text-white">{baseDescription}</p>
+        <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
+        <p className="mt-2 text-lg text-gray-400">{baseDescription}</p>
       </div>
       <div className="mt-10">
-        <ul className="divide-y divide-gray-200">
+        <ul className="space-y-4">
           {data.map((method) => (
-            <div key={method.key}>
-              <li className="py-4">
-                <div className="flex items-center space-x-4">
-                  
-                  <div className="flex-1 min-w-0 py-4">
-                    <p className="text-lg font-medium text-amber-300 truncate">
-                      {method.title}
-                    </p>
-                    <p className="mt-1 text-2lg text-gray-400 font-mono">
-                      <span className="text-bold text-lg text-gray-200">
-                        Description:{" "}
-                      </span>
-                      {method.description}
-                    </p>
-                  </div>
-                </div>
-                <ShowCode code={method.codesample} />
-              </li>
-            </div>
+            <li key={method.key} className="border rounded-lg p-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-lg font-medium text-white">
+                  {method.title}
+                </h2>
+                <button className="text-gray-500 hover:text-gray-400 transition-colors duration-300">
+                  <FaCode className="text-lg" />
+                  <span className="sr-only">Show code</span>
+                </button>
+              </div>
+              <p className="mt-2 text-gray-400">{method.description}</p>
+              <ShowCode code={method.codesample} />
+            </li>
           ))}
         </ul>
       </div>
-      <div className="mt-10 p-4 pb-40 text-gray-500 font-mono">
-        <TextBox
-          title={description.title}
-          description={description.description}
-          icon={<FaCode className="text-white" />}
-          buttonLabel="Learn More"
-          buttonLink="/learn"
-        />
-      </div>
+     
     </div>
   );
 };
+
 export default DocLayout;

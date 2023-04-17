@@ -4,12 +4,14 @@ import './../app/globals.css';
 
 function RootLayout({ children }) {
   return (
-    <div className="h-screen bg-gray-900">
-      <nav>
+    <div className="min-h-screen bg-gray-900">
+      <header>
         <Navbar />
-      </nav>
-      {children}
-      <Footer />
+      </header>
+      <main>{children}</main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
