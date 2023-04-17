@@ -3,11 +3,11 @@ import { Disclosure } from '@headlessui/react';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import navigation from './navigation';
 import Link from 'next/link';
-import GettingStarted from '../../components/GettingStarted';
+import ShowCode from '../../components/ShowCode';
 
 const Docs = () => {
   return (
-    <div className="bg-gray-900 text-gray-100">
+    <div className="bg-gray-900 text-gray-100 min-h-screen">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-white">
@@ -24,7 +24,7 @@ const Docs = () => {
                 {({ open }) => (
                   <>
                     <Disclosure.Button
-                      className="flex justify-between items-center w-full text-left text-lg font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-50 transition ease-in-out duration-150"
+                      className="flex justify-between items-center w-full text-left text-lg font-medium text-gray-400 hover:text-gray-100 hover:bg-gray-700 rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-50 transition ease-in-out duration-150 px-4 py-3"
                     >
                       <span>{category.name}</span>
                       <ArrowRightIcon
@@ -55,7 +55,7 @@ const Docs = () => {
                                   {option.description ? 
                                     <p className="mt-2 text-mono text-xs text-gray-100">{option.description}</p> 
                                   : 
-                                    <GettingStarted code={option.code} />
+                                    <ShowCode code={option.code} />
                                   }
                                 </div>
                               </span>

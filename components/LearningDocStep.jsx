@@ -1,5 +1,5 @@
 import React from 'react';
-import GettingStarted from './GettingStarted';
+import ShowCode from './ShowCode';
 import { FiCode } from 'react-icons/fi';
 
 const LearningDocStep = ({ step, code }) => {
@@ -19,7 +19,7 @@ const LearningDocStep = ({ step, code }) => {
       <div className="bg-gray-900 shadow rounded-md p-4 mt-4">
         <p className="text-lg font-bold text-white pt-2">{step.title}</p>
         <div className="bg-gray-900 rounded-md p-4 mt-2 md:ml-16 overflow-x-auto text-black">
-          <GettingStarted code={step.codesample} />
+          <ShowCode code={step.codesample} />
         </div>
       </div>
     </div>

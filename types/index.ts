@@ -15,6 +15,7 @@ export type CardOption = {
 export type Option = {
   label: string;
   link: string;
+  shortdescription: string;
 };
 
 export type Card = {
@@ -34,7 +35,7 @@ export type SupabaseCard = {
   short_desc: string;
   image_url: string;
   link_url: string;
-  options: { label: string; link: string }[];
+  options: { label: string; link: string; shortdescription: string }[];
 };
 
 export type LearningInfo = {

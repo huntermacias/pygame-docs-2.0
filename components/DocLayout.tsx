@@ -1,7 +1,8 @@
 import React from "react";
-import GettingStarted from "./GettingStarted";
+import ShowCode from "./ShowCode";
 import TextBox from "./TextBox";
 import { LayoutProps } from "../types";
+import { FaCode } from 'react-icons/fa';
 
 
 const DocLayout = ({
@@ -35,7 +36,7 @@ const DocLayout = ({
                     </p>
                   </div>
                 </div>
-                <GettingStarted code={method.codesample} />
+                <ShowCode code={method.codesample} />
               </li>
             </div>
           ))}
@@ -45,6 +46,9 @@ const DocLayout = ({
         <TextBox
           title={description.title}
           description={description.description}
+          icon={<FaCode className="text-white" />}
+          buttonLabel="Learn More"
+          buttonLink="/learn"
         />
       </div>
     </div>

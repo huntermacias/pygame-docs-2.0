@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import GettingStarted from "../components/GettingStarted";
+import ShowCode from "../components/ShowCode";
 import PygameModal from "../components/PygameModal";
 import { gettingstart } from "../helpers/documentation-code";
 import React, { useState } from 'react';
@@ -141,7 +141,7 @@ export default function Home() {
                   $ pip install pygame
                 </code>
               </ol>
-              <GettingStarted code={gettingstart} />
+              <ShowCode code={gettingstart} />
               <hr />
               <p className="text-sm md:text-lg pt-8">
                 Pygame is a powerful library for creating games and interactive

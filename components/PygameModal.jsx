@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { CodeIcon } from '@heroicons/react/solid';
-import GettingStarted from './GettingStarted';
+import ShowCode from './ShowCode';
 import Link from 'next/link';
 
 const PygameModal = () => {
@@ -146,7 +146,7 @@ const PygameModal = () => {
                 <p className="text-sm font-medium text-gray-500">
                   Generated Pygame code:
                 </p>
-                <GettingStarted code={code} />
+                <ShowCode code={code} />
               </div>
             )}
           </div>

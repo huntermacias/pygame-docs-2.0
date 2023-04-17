@@ -15,6 +15,7 @@ const mapSupabaseCardToCard = (supabaseCard: SupabaseCard): Card => {
     options: supabaseCard.options.map((option) => ({
       label: option.label,
       link: option.link,
+      shortdescription: option.shortdescription,
     })),
   };
 };
