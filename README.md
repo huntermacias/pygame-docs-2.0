@@ -90,6 +90,24 @@ git push origin my-new-feature
 
 7. Create a new pull request on the original repository
 
+#### Commit Message Style Guide
+Thank you for contributing to our project! In order to keep our commit history consistent and easy to read, we ask that you ### follow these guidelines when writing your commit messages.
+
+#### Each commit message should begin with a unique emoji that represents the type of change being made. Here are some examples:
+
+:sparkles: :sparkles: - adding new features
+:bug: :bug: - fixing a bug
+:pencil: :pencil: - updating documentation or comments
+:art: :art: - making visual or stylistic changes
+:fire: :fire: - removing code or files
+:truck: :truck: - moving or renaming files
+:zap: :zap: - improving performance
+:construction: :construction: - work in progress
+After the emoji, please include a brief, descriptive summary of the change in present tense, starting with a lowercase letter. ### For example:
+
+:sparkles: Add new feature for user authentication
+
+
 ## Development
 #### To start the development server, run the following command: 
 ```terminal
