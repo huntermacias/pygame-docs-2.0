@@ -95,14 +95,14 @@ Thank you for contributing to our project! In order to keep our commit history c
 
 #### Each commit message should begin with a unique emoji that represents the type of change being made. Here are some examples:
 
-- :sparkles: :sparkles: - adding new features
-- :bug: :bug: - fixing a bug
-- :pencil: :pencil: - updating documentation or comments
-- :art: :art: - making visual or stylistic changes
-- :fire: :fire: - removing code or files
-- :truck: :truck: - moving or renaming files
-- :zap: :zap: - improving performance
-- :construction: :construction: - work in progress\
+- :sparkles: - adding new features
+- :bug:  - fixing a bug
+- :pencil: - updating documentation or comments
+- :art: - making visual or stylistic changes
+- :fire: - removing code or files
+- :truck: - moving or renaming files
+- :zap: - improving performance
+- :construction: - work in progress\
 
 
 #### After the emoji, please include a brief, descriptive summary of the change in present tense, starting with a lowercase letter. ### For example:
