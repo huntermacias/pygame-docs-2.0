@@ -105,7 +105,7 @@ Thank you for contributing to our project! In order to keep our commit history c
 - :construction: - work in progress\
 
 
-#### After the emoji, please include a brief, descriptive summary of the change in present tense, starting with a lowercase letter. ### For example:
+#### After the emoji, please include a brief, descriptive summary of the change in present tense, starting with a lowercase letter. For example:
 
 :sparkles: Add new feature for user authentication
 
