@@ -9,7 +9,7 @@ const MixerPage = ({ mouse_info }) => {
         title: step.title,
         description: step.description,
         shortDesc: step.shortDesc,
-        codesample: step.code_sample || "",
+        codesample: step.codesample || "",
       }))
     : [];
 
