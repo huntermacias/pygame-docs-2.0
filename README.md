@@ -24,6 +24,26 @@ npm install
 ```
 ## Contributing
 
+#### Commit Message Style Guide
+Thank you for contributing to our project! In order to keep our commit history consistent and easy to read, we ask that you ### follow these guidelines when writing your commit messages.
+
+#### Each commit message should begin with a unique emoji that represents the type of change being made. Here are some examples:
+
+- :sparkles: - adding new features
+- :bug:  - fixing a bug
+- :pencil: - updating documentation or comments
+- :art: - making visual or stylistic changes
+- :fire: - removing code or files
+- :truck: - moving or renaming files
+- :zap: - improving performance
+- :construction: - work in progress\
+
+
+#### After the emoji, please include a brief, descriptive summary of the change in present tense, starting with a lowercase letter. For example:
+
+:sparkles: Add new feature for user authentication
+
+
 ##### We welcome contributions from anyone who is interested in improving this project. If you are new to open-source contributions, check out the GitHub documentation on contributing to open-source projects.
 
 ### Create Default Table - Supabase
@@ -59,12 +79,6 @@ VALUES (
 ##### Note: Make sure that you have the correct schema selected before running the SQL queries. Also, if you already have a table with thesame name as another in your Supabase database, running these queries will overwrite the existing data.
 
 
-## Issues
-
-#### If you find an issue with the project or have a feature request, you can create a new issue on our GitHub issues page. When creating a new issue, please provide as much detail as possible about the issue or feature request.
-
-## Contributing
-
 #### If you would like to contribute to the project, you can do so by creating a pull request. Here are the steps to create a pull request:
 
 1. Fork this repository to your own GitHub account.
@@ -90,24 +104,11 @@ git push origin my-new-feature
 
 7. Create a new pull request on the original repository
 
-#### Commit Message Style Guide
-Thank you for contributing to our project! In order to keep our commit history consistent and easy to read, we ask that you ### follow these guidelines when writing your commit messages.
-
-#### Each commit message should begin with a unique emoji that represents the type of change being made. Here are some examples:
-
-- :sparkles: - adding new features
-- :bug:  - fixing a bug
-- :pencil: - updating documentation or comments
-- :art: - making visual or stylistic changes
-- :fire: - removing code or files
-- :truck: - moving or renaming files
-- :zap: - improving performance
-- :construction: - work in progress\
 
 
-#### After the emoji, please include a brief, descriptive summary of the change in present tense, starting with a lowercase letter. For example:
+## Issues
 
-:sparkles: Add new feature for user authentication
+#### If you find an issue with the project or have a feature request, you can create a new issue on our GitHub issues page. When creating a new issue, please provide as much detail as possible about the issue or feature request.
 
 
 ## Development
