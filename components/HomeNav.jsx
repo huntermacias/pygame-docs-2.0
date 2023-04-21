@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Autosuggest from 'react-autosuggest';
 
+// TODO: transfer data to supabase
+
 function HomeNav() {
   const data = [
     { name: 'Pygame', url: '/pygame' },
