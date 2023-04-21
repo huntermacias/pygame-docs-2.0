@@ -34,7 +34,7 @@ Thank you for contributing to our project! In order to keep our commit history c
 - :pencil: - updating documentation or comments
 - :art: - making visual or stylistic changes
 - :fire: - removing code or files
-- :truck: - moving or renaming files
+- :truck: - moving or renaming files/data
 - :zap: - improving performance
 - :construction: - work in progress\
 
