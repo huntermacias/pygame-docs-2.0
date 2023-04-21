@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { FaFileAlt } from "react-icons/fa";
 
