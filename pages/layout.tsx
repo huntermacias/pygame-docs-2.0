@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import './globals.css'
+import HomeNav from '../components/HomeNav';
 
 
 
@@ -18,6 +19,8 @@ function RootLayout({ children }) {
         <nav>
           <Navbar />
         </nav>
+        <HomeNav />
+
         {children}
         <br />
         <div className="md:block hidden">

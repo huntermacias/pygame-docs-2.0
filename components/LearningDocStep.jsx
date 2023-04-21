@@ -11,8 +11,8 @@ const LearningDocStep = ({ step, code }) => {
             <FiCode className="text-indigo-500 text-2xl" />
           </span>
         </div>
-        <div className="ml-4">
-          <h2 className="text-lg font-bold text-gray-200">How to {step.title}</h2>
+        <div className="ml-4 outline outline-gray-600/30 rounded-md p-4">
+          <h2 className="text-lg font-bold text-gray-200">{step.title}</h2>
           <p className="text-gray-400 text-base mt-2">{step.description}</p>
         </div>
       </div>
