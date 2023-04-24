@@ -5,7 +5,7 @@ import Code from "./Code";
 
 type Props = { code: string };
 
-const GettingStarted = ({ code }: Props) => {
+const ShowCode = ({ code }: Props) => {
   const handleCopyClick = () => {
     navigator.clipboard.writeText(code);
   };
@@ -33,4 +33,4 @@ const GettingStarted = ({ code }: Props) => {
   );
 };
 
-export default GettingStarted;
+export default ShowCode;

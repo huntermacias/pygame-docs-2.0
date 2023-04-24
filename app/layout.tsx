@@ -1,5 +1,4 @@
 // import Head from 'next/head';
-'use client'
 import HomeNav from '../components/HomeNav';
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'

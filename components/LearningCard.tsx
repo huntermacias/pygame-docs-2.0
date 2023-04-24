@@ -19,7 +19,7 @@ const LearningCard: React.FC<Props> = ({ card }) => {
   };
 
   return (
-    <div className="max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg bg-gray-800">
+    <div className="max-w-md mx-auto rounded-lg overflow-hidden shadow-lg bg-gray-800">
       <div className="relative h-56">
         <Image
           className="object-cover w-full h-full"
@@ -60,34 +60,44 @@ const LearningCard: React.FC<Props> = ({ card }) => {
         {isLocked ? (
           <button
             onClick={unlockCard}
-            className="mt-4 mb-2 p-4 ml-4 mr-4 text-sm font-semibold text-white bg-red-500 rounded-lg focus:outline-none hover:bg-red-600"
+            className="mt-4 p-4 text-sm font-semibold text-white bg-red-500 rounded-lg focus:outline-none hover:bg-red-600"
           >
             Unlock Now
           </button>
         ) : (
           <button
             onClick={toggleDropdown}
-            className="mt-4 mb-2 p-4 ml-4 mr-4 text-sm font-semibold text-gray-300 bg-gray-700 rounded-lg focus:outline-none hover:bg-gray-600"
+            className="mt-4 p-4 text-sm font-semibold text-gray-300 bg-gray-700 rounded-lg focus:outline-none hover:bg-gray-600"
           >
             Learn More
           </button>
         )}
         {isOpen && (
-          <ul className="mt-2 space-y-2 text-sm bg-gray-800">
+          <ul className="mt-4 space-y-4 text-sm bg-gray-800 rounded-lg">
             {card.options.map((option, key) => (
-              <li key={key} className="hover:bg-gray-600 hover:rounded-md p-2" >
+              <li
+                key={key}
+                className="hover:bg-gray-700 hover:rounded-md px-4 py-2"
+              >
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 text-gray-300">{key+1}.</div>
+                  <div className="flex-shrink-0 text-gray-300">{key + 1}.</div>
                   <div className="ml-3 text-gray-300 font-medium">
-                    <a href={option.link} target="_blank" rel="noopener noreferrer">{option.label}</a>
+                    <a
+                      href={option.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white"
+                    >
+                      {option.label}
+                    </a>
                   </div>
                 </div>
-                <p className="pl-8 pr-2 text-gray-400">{option.shortdescription}</p>
+                <p className="pl-8 pr-2 text-gray-400">
+                  {option.shortdescription}
+                </p>
               </li>
             ))}
           </ul>
-       
-
         )}
       </div>
     </div>

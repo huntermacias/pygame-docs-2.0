@@ -44,7 +44,7 @@ const LearnPage = () => {
     <div className="container mx-auto py-10 font-mono">
       <div className="relative grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cards.map((card, index) => (
-          <div key={index} className="overflow-hidden mb-14 shadow-lg rounded-lg bg-[#0a0a0a] ">
+          <div key={index} className="overflow-hidden mb-14">
             <LearningCard card={card} />
           </div>
         ))}
