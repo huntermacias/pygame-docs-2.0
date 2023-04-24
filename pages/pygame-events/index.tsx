@@ -13,7 +13,7 @@ const PygamePage = ({ pygame_events }) => {
       }))
     : [];
 
-	const spriteCollisionDescription = {
+	const eventDescription = {
 		title: "Events in Pygame",
 		description: "pygame.event is a module in the Pygame library that provides a simple and efficient way to handle events such as user input and system events in games and other multimedia applications. It allows game developers to create responsive and interactive games by detecting user input and responding to it accordingly. pygame.event is useful because it provides a straightforward interface for working with events and includes various functions for polling, waiting, posting, and clearing events from the event queue. With pygame.event, game developers can create complex and interactive game mechanics that respond to user input, making their games more engaging and immersive."
 	  };
@@ -21,11 +21,11 @@ const PygamePage = ({ pygame_events }) => {
 
   return (
     <LearningDocLayout
-      title={spriteCollisionDescription?.title}
-      baseDescription={spriteCollisionDescription?.description}
+      title={eventDescription?.title}
+      baseDescription={eventDescription?.description}
       shortDesc={pygame_events?.shortDesc}
       data={formattedSteps}
-      description={spriteCollisionDescription}
+      description={eventDescription}
       
     />
   );
